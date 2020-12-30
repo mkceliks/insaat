@@ -58,7 +58,7 @@
              //Eğer içerik değişirse if bloğu çalışır.
             if ($sorgu->affected_rows > 0) {
                 echo "İçerik : " . $yeni_icerik ." olarak güncellendi! <br>";
-                echo "<a href='../adminAnaSayfa.html'>Çıkmak için tıklayın</a>";
+                echo "<a href='../adminAnaSayfa.php'>Çıkmak için tıklayın</a>";
                 
             }else {
                  echo "Herhangi bir kayıt güncellenemedi.";
