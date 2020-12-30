@@ -87,8 +87,28 @@
         <tr>
             <td>Telefon için </td><td> <a class="link" href="ayarlar/telefon.php">Tıklayınız.</a></td>
         </tr>
+        
+        <tr>
+        <th>Projeler</th>
+        <th>Işlem</th>
+        </tr>
 
         <tr>
+            <td>Proje için </td><td> <a  class="link"href="proje/projeler.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+        <th>Çalışanlar</th>
+        <th>Işlem</th>
+        </tr>
+
+        <tr>
+            <td>Çalışanlar için </td><td> <a  class="link" href="calisanlar/veri_al.php">Tıklayınız.</a></td>
+        </tr>
+
+
+        <tr>
+        
 
         <th style="background-color: #c01c33;">Çıkış</th>
         <th style="background-color: #c01c33;">Işlem</th>
