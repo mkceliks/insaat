@@ -13,8 +13,11 @@
     ob_start();
     session_start();
 
+    $admin_giris_isim  = $_POST["adminID"];
+    $admin_giris_sifre = $_POST["adminPassword"];
+
     
-    $sql = "SELECT ID, sifre FROM admin";
+    $sql = "SELECT ID, sifre FROM admin WHERE ID='$admin_giris_isim' ";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
@@ -25,8 +28,7 @@
 
     
     
-    $admin_giris_isim  = $_POST["adminID"];
-    $admin_giris_sifre = $_POST["adminPassword"];
+    
 
     if($admin_giris_isim == $id && md5($admin_giris_sifre) == $sifre){ //md5 DB üzerinde bir şiferelemedir
         
