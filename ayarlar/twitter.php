@@ -6,11 +6,19 @@
     <meta http-equiv="Content-Language" content = "tr">
     <meta charset="UTF-8">
     
-    <title>En üstteki yazıyı değiştir</title>
+    <title>Twitter değiştir</title>
 </head>
 <body>
     <?php 
         //İÇERİĞİ ÇEK
+
+        session_start();
+        ob_start();
+        
+        
+        if(!isset($_SESSION["login"])){//Session kontrol
+            header("Location:../adminError.php");
+        }
 
         $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi='twitter'";
         $result = mysqli_query($conn, $sql);
