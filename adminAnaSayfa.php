@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content = "text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content = "tr">
     <meta charset="UTF-8">
-    
+    <link rel="stylesheet" href="css/random.css">
     <title>Admin Paneli</title>
 </head>
 <body>
@@ -18,26 +18,84 @@
             header("Location:adminError.php");
         }
     ?>
-    <table>
-        <tr>
-            <td>En üstteki yazı için <a href="ayarlar/en_ust_yazi.php">tıkla.</a></td>
-        </tr>
-        <tr>
-            <td>Slogan için <a href="ayarlar/slogan.php">tıkla.</a></td>
-        </tr>
-        <tr>
-            <td>Hakkımızda için <a href="ayarlar/hakkimizda.php">tıkla.</a></td>
-        </tr>
-        <tr>
-            <td>Telefon için <a href="ayarlar/telefon.php">tıkla.</a></td>
-        </tr>
-        <tr>
-            <td>Facebook için <a href="ayarlar/facebook.php">tıkla.</a></td>
-        </tr>
-
+    <table id="tablo">
 
         <tr>
-            <td>Güvenli çıkış için <a href="guvenliCikis.php">tıkla.</a></td>
+        <th>Yazılar</th>
+        <th>Işlem</th>
+        </tr>
+
+        <tr>
+            <td>En üstteki yazı için</td><td> <a class="link" href="ayarlar/en_ust_yazi.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Slogan için </td><td> <a class="link" href="ayarlar/slogan.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Hakkımızda için </td><td> <a class="link" href="ayarlar/hakkimizda.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Hakkimizda Alt Kisim için </td><td> <a  class="link"href="ayarlar/hakkimizda_footer.php">Tıklayınız.</a></td>
+        
+        </tr>
+
+        <tr>
+        <th>Sosyal Medya Linkleri</th>
+        <th>Işlem</th>
+        </tr>
+
+        <tr>
+            <td>Facebook için </td><td> <a class="link" href="ayarlar/facebook.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Twitter için </td><td> <a class="link" href="ayarlar/twitter.php">Tıklayınız.</a></td>
+        </tr>
+
+         <tr>
+            <td>Instagram için </td><td> <a class="link" href="ayarlar/instagram.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>LinkedIn için </td><td> <a class="link" href="ayarlar/linkedin.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Pinterest için </td><td> <a class="link" href="ayarlar/pinterest.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Youtube için </td><td> <a  class="link"href="ayarlar/youtube.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+        <th>Iletişim Bilgileri</th>
+        <th>Işlem</th>
+        </tr>
+
+        <tr>
+            <td>E-mail için </td><td> <a  class="link"href="ayarlar/email.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Adres için </td><td> <a  class="link"href="ayarlar/adres.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Telefon için </td><td> <a class="link" href="ayarlar/telefon.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+
+        <th style="background-color: #c01c33;">Çıkış</th>
+        <th style="background-color: #c01c33;">Işlem</th>
+
+        </tr>
+        <tr>
+            <td>Güvenli çıkış için </td><td> <a class="linkred" href="guvenliCikis.php">Tiklayiniz.</a></td>
         </tr>
 
     

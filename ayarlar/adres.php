@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Language" content = "tr">
     <meta charset="UTF-8">
     
-    <title>Twitter değiştir</title>
+    <title>Adres değiştir</title>
 </head>
 <body>
     <?php 
@@ -20,21 +20,21 @@
             header("Location:../adminError.php");
         }
 
-        $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi='twitter'";
+        $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi='adres'";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
 
-        $twitter_icerik = $row['icerik'];
+        $adres_icerik = $row['icerik'];
 
 
         
     ?>
     <!-- FORM OLUŞTUR-->
-    <form action="twitter.php" method="post">
+    <form action="adres.php" method="post">
         <table style="margin-left: auto; margin-right: auto; border: 1px solid black;"> 
             <tr>
 
-               <td colspan = '2'> <textarea name="twitter" id="twitter" cols="30" rows="20" ><?php echo $twitter_icerik;  ?></textarea></td> 
+               <td colspan = '2'> <textarea name="adres" id="adres" cols="30" rows="20" ><?php echo $adres_icerik;  ?></textarea></td> 
             </tr>
             <tr>
                 <td><input type="submit" value="Güncelle" style = "background-color : chartreuse"></td> 
@@ -48,9 +48,9 @@
     <?php 
         //FORMDAN ALINAN İÇERİĞİ VERİTABANINDA GÜNCELLE
     
-        if (isset($_POST["twitter"])){
-            $yeni_icerik = $_POST["twitter"];
-            $sorgu = $conn->prepare("UPDATE icerikler SET icerik = ? WHERE icerik_ismi = 'twitter'");
+        if (isset($_POST["adres"])){
+            $yeni_icerik = $_POST["adres"];
+            $sorgu = $conn->prepare("UPDATE icerikler SET icerik = ? WHERE icerik_ismi = 'adres'");
             $sorgu->bind_param("s", $yeni_icerik);
             $sorgu->execute();
 

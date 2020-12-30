@@ -58,7 +58,7 @@
                         </div>
                         <div class="top-area-block top-area-socials socials-colored-hover">
                            <div class="socials inline-inside"> 
-                              <a class="socials-item" href=<?php 
+                              <a class="socials-item" href='<?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'facebook'";
                                  $result = mysqli_query($conn, $sql);
                                  $row = mysqli_fetch_assoc($result);
@@ -66,12 +66,52 @@
                                  $facebook_icerik = $row['icerik'];
                                  echo $facebook_icerik;
                      
-                              ?> target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                              <a class="socials-item" href="#" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                              <a class="socials-item" href="#" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
-                              <a class="socials-item" href="#" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
-                              <a class="socials-item" href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a> 
-                              <a class="socials-item" href="#" target="_blank" title="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                              ?>' target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                              <a class="socials-item" href='<?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'twitter'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $twitter_icerik = $row['icerik'];
+                                 echo $twitter_icerik;
+                     
+                              ?>' target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+                              <a class="socials-item" href='<?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'instagram'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $instagram_icerik = $row['icerik'];
+                                 echo $instagram_icerik;
+                     
+                              ?>' target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                              <a class="socials-item" href='<?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'linkedin'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $linkedin_icerik = $row['icerik'];
+                                 echo $linkedin_icerik;
+                     
+                              ?>' target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>  
+                              <a class="socials-item" href='<?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'pinterest'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $pinterest_icerik = $row['icerik'];
+                                 echo $pinterest_icerik;
+                     
+                              ?>' target="_blank" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a> 
+                              <a class="socials-item" href='<?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'youtube'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $youtube_icerik = $row['icerik'];
+                                 echo $youtube_icerik;
+                     
+                              ?>' target="_blank" title="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                            </div>
                         </div>
                      </div>
@@ -614,7 +654,15 @@
                            </div>
                            <div class="info-content">
                               <h6 class="uppercase"> Email Address:</h6>
-                              <p>Demo@gmail.com</p>
+                              <p><?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'e-mail'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $email_icerik = $row['icerik'];
+                                 echo $email_icerik;
+                     
+                              ?></p>
                            </div>
                         </li>
                      </ul>
@@ -675,7 +723,15 @@
                      <h2 class="widget-title"><span>Hakkımızda</span></h2>
                      <div class="textwidget">
                         <a class="navbar-brand" href="index-building.html"><img src="images/logo-icon.png" alt="image"><span>Constructed</span></a>
-                        <p>Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit eget. Aenean suscipit eget mi act fermentum phasellus vulputate turpis tincidunt. Aenean suscipit ege  Aenean suscipit eget mi act fermentum phasellus.</p>
+                        <p><?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'hakkimizda_footer'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $hakkimizda_footer_icerik = $row['icerik'];
+                                 echo $hakkimizda_footer_icerik;
+                     
+                              ?></p>
                      </div>
                   </div>
                </div>
@@ -698,11 +754,19 @@
                      <ul>
                         <li class="address clearfix">
                            <span class="hl">Adres:</span>
-                           <span class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                           <span style="margin-left: 1px;" class="text"><?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'adres'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $adres_icerik = $row['icerik'];
+                                 echo $adres_icerik;
+                     
+                              ?></span>
                         </li>
                         <li class="phone clearfix">
                            <span class="hl">Telefon:</span> 
-                           <span class="text">
+                           <span style="margin-left: 1px;" class="text">
                            <?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'telefon'";
                                  $result = mysqli_query($conn, $sql);
@@ -715,14 +779,39 @@
                            </span>
                         </li>
                         <li class="email clearfix">
-                           <span class="hl">E-mail:</span>
-                           <span class="text">business@support.com</span>
+                           <span class="hl">Email:
+                           <span class="text"><?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'e-mail'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $email_icerik = $row['icerik'];
+                                 echo $email_icerik;
+                     
+                              ?></span>
                         </li>
                      </ul>
                   </div>
                   <div class="widget widget_socials">
                      <div class="socials">
-                        <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href='<?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'twitter'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $twitter_icerik = $row['icerik'];
+                                 echo $twitter_icerik;
+                     
+                              ?>'><i class="fa fa-twitter"></i></a>
+                              <a target="_blank" href='<?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'instagram'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $instagram_icerik = $row['icerik'];
+                                 echo $instagram_icerik;
+                     
+                              ?>'><i class="fa fa-instagram"></i></a>
                         <a target="_blank" href= <?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'facebook'";
                                  $result = mysqli_query($conn, $sql);
@@ -734,9 +823,37 @@
                               ?>>
                            <i class="fa fa-facebook"></i>
                         </a>
-                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-pinterest"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-dribbble"></i></a>
+                        <a target="_blank" href= <?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'linkedin'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $linkedin_icerik = $row['icerik'];
+                                 echo $linkedin_icerik;
+                     
+                              ?>>
+                           <i class="fa fa-linkedin"></i>
+                        </a>
+                  
+                        <a target="_blank" href=<?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'pinterest'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $pinterest_icerik = $row['icerik'];
+                                 echo $pinterest_icerik;
+                     
+                              ?>><i class="fa fa-pinterest"></i></a>
+
+                              <a target="_blank" href=<?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'youtube'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $youtube_icerik = $row['icerik'];
+                                 echo $youtube_icerik;
+                     
+                              ?>><i class="fa fa-youtube"></i></a>
                      </div>
                   </div>
                </div>

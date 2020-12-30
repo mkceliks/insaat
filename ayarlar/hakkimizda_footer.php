@@ -6,12 +6,11 @@
     <meta http-equiv="Content-Language" content = "tr">
     <meta charset="UTF-8">
     
-    <title>Twitter değiştir</title>
+    <title>Hakkımızda Footer değiştir</title>
 </head>
 <body>
     <?php 
         //İÇERİĞİ ÇEK
-
         session_start();
         ob_start();
         
@@ -20,21 +19,22 @@
             header("Location:../adminError.php");
         }
 
-        $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi='twitter'";
+
+        $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi='hakkimizda_footer'";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
 
-        $twitter_icerik = $row['icerik'];
+        $hakkimizda_footer_icerik = $row['icerik'];
 
 
         
     ?>
     <!-- FORM OLUŞTUR-->
-    <form action="twitter.php" method="post">
+    <form action="hakkimizda_footer.php" method="post">
         <table style="margin-left: auto; margin-right: auto; border: 1px solid black;"> 
             <tr>
 
-               <td colspan = '2'> <textarea name="twitter" id="twitter" cols="30" rows="20" ><?php echo $twitter_icerik;  ?></textarea></td> 
+               <td colspan = '2'> <textarea name="hakkimizda_footer" id="hakkimizda_footer" cols="30" rows="20" ><?php echo $hakkimizda_footer_icerik;  ?></textarea></td> 
             </tr>
             <tr>
                 <td><input type="submit" value="Güncelle" style = "background-color : chartreuse"></td> 
@@ -48,9 +48,9 @@
     <?php 
         //FORMDAN ALINAN İÇERİĞİ VERİTABANINDA GÜNCELLE
     
-        if (isset($_POST["twitter"])){
-            $yeni_icerik = $_POST["twitter"];
-            $sorgu = $conn->prepare("UPDATE icerikler SET icerik = ? WHERE icerik_ismi = 'twitter'");
+        if (isset($_POST["hakkimizda_footer"])){
+            $yeni_icerik = $_POST["hakkimizda_footer"];
+            $sorgu = $conn->prepare("UPDATE icerikler SET icerik = ? WHERE icerik_ismi = 'hakkimizda_footer'");
             $sorgu->bind_param("s", $yeni_icerik);
             $sorgu->execute();
 

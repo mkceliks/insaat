@@ -1,0 +1,61 @@
+/**css for admin dashboard**/
+
+.link:link, .link:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.link:hover, .link:active {
+  background-color: green;
+  color: white;
+}
+
+.linkred:link, .linkred:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #c01c33;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  
+}
+
+.linkred:hover, .linkred:active {
+  background-color: #c01c33;
+  color: white;
+}
+
+#tablo {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 85%;
+  margin-left: 100px;
+}
+
+#tablo td, #tablo th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  
+}
+
+#tablo tr:nth-child(even){background-color: #f2f2f2;}
+
+#tablo tr:hover {background-color: #ddd;}
+
+#tablo th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}

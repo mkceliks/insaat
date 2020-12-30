@@ -13,6 +13,7 @@
 
     
     $sql = "SELECT isim, sifre FROM admin WHERE isim='$admin_giris_isim' ";
+
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
@@ -21,11 +22,7 @@
     $sifre = $row["sifre"];
     
 
-    
-    
-    
-
-    if($admin_giris_isim == $isim && md5($admin_giris_sifre) == $sifre){ //md5 DB üzerinde bir şiferelemedir
+    if($admin_giris_isim == $isim && md5($admin_giris_sifre) == $sifre){ //md5 DB üzerinde bir şifrelemedir
         
 
         $_SESSION["login"] = 'true';
