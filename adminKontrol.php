@@ -10,21 +10,32 @@
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    $sql = "SELECT ID, sifre FROM admin WHERE ID = 'mkemal'";
+    ob_start();
+    session_start();
+
+    
+    $sql = "SELECT ID, sifre FROM admin";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
+    
     $id = $row["ID"];
     $sifre = $row["sifre"];
+    
 
     
     
     $admin_giris_isim  = $_POST["adminID"];
     $admin_giris_sifre = $_POST["adminPassword"];
 
-    if($admin_giris_isim == $id && $admin_giris_sifre == $sifre){ //md5 DB üzerinde bir şiferelemedir
+    if($admin_giris_isim == $id && md5($admin_giris_sifre) == $sifre){ //md5 DB üzerinde bir şiferelemedir
+        
 
-       header('Location:adminAnaSayfa.html');
+        $_SESSION["login"] = 'true';
+        $_SESSION["ID"] = $id;
+        $_SESSION["sifre"] = $sifre;
+
+       header('Location:adminAnaSayfa.php');
 
 
     }else{

@@ -58,26 +58,17 @@
                         </div>
                         <div class="top-area-block top-area-socials socials-colored-hover">
                            <div class="socials inline-inside"> 
-                              <a class="socials-item" href='<?php 
+                              <a class="socials-item" href=<?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'facebook'";
                                  $result = mysqli_query($conn, $sql);
                                  $row = mysqli_fetch_assoc($result);
 
                                  $facebook_icerik = $row['icerik'];
-                                 
                                  echo $facebook_icerik;
                      
-                              ?>' target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                              ?> target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                               <a class="socials-item" href="#" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                              <a class="socials-item" href='<?php 
-                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'twitter'";
-                                 $result = mysqli_query($conn, $sql);
-                                 $row = mysqli_fetch_assoc($result);
-
-                                 $twitter_icerik = $row['icerik'];
-                                 echo $twitter_icerik;
-                     
-                              ?>' target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+                              <a class="socials-item" href="#" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
                               <a class="socials-item" href="#" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
                               <a class="socials-item" href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a> 
                               <a class="socials-item" href="#" target="_blank" title="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
@@ -731,15 +722,7 @@
                   </div>
                   <div class="widget widget_socials">
                      <div class="socials">
-                        <a target="_blank" href=<?php 
-                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'twitter'";
-                                 $result = mysqli_query($conn, $sql);
-                                 $row = mysqli_fetch_assoc($result);
-
-                                 $twitter_icerik = $row['icerik'];
-                                 echo $twitter_icerik;
-                     
-                              ?>><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
                         <a target="_blank" href= <?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'facebook'";
                                  $result = mysqli_query($conn, $sql);

@@ -10,6 +10,8 @@
 <body>
     <?php 
 
+      
+
       echo "HATA giriş sayfasına gitmek için" . "<a href='yonetici.html'> tıklayınız.</a>";
     
     ?>

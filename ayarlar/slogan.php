@@ -11,6 +11,14 @@
 <body>
     <?php 
         //İÇERİĞİ ÇEK
+        session_start();
+        ob_start();
+        
+        
+        if(!isset($_SESSION["login"])){//Session kontrol
+            header("Location:../adminError.php");
+        }
+
 
         $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi='slogan'";
         $result = mysqli_query($conn, $sql);
@@ -30,7 +38,7 @@
             </tr>
             <tr>
                 <td><input type="submit" value="Güncelle" style = "background-color : chartreuse"></td> 
-                <td style = "float:right;"><button style="background-color : red"><a href="../adminAnaSayfa.html" style ="color:black; text-decoration:none;">İptal Et</a></button></td>
+                <td style = "float:right;"><button style="background-color : red"><a href="../adminAnaSayfa.php" style ="color:black; text-decoration:none;">İptal Et</a></button></td>
             </tr>
             
         </table>
