@@ -23,7 +23,7 @@
     $result = mysqli_query($conn, $sql);
     echo "<table id=tablo>
     <tr>
-        <td> ID </td>
+        
         <td> İsim Soyad </td>
         <td> E - posta</td>
         <td> Facebook </td>
@@ -43,7 +43,7 @@
 
         echo "
                 <tr>
-                    <td> {$row['id']}</td>
+                    
                     <td> {$row['isim_soyad']}</td>
                     <td> {$row['e_posta']}</td>
                     <td> {$row['facebook']}</td>
@@ -52,18 +52,21 @@
                     <td> {$row['departman']}</td>
                     <td> {$row['telefon']}</td>
                     <td> {$row['adres']}</td>
+                    <td> <a href = 'sil.php?ID= ".$row['id']." '> Sil </a> </td>
                     
 
                 </tr>
 
-            </table>  
+           
         ";
-
+        
         
         
         echo "<br>";
 
     }
+    echo "</table>"; 
+
 
     
 
@@ -76,15 +79,7 @@
         <td> <button><a style="color:black; text-decoration:none;" href="veriyiekle.php"> Veri eklemek için tıkla </a></button> </td>
     </tr>
 
-<tr>
-    <td>
-    <form action="sil.php" method="post" style="margin-right:auto;">
-    <input type = "text" name ="id" id="id" placeholder = "Silinecek çalışan ID">
-    <input type = "submit" value = "Kaydı sil ">
-    </form>
 
-    </td>
-</tr>
 
 </table>
     

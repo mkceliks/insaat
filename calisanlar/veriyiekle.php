@@ -28,7 +28,7 @@
             </tr>
             <tr>
                 <td>E-posta</td>
-                <td><input type="text" name="c_e_posta" id="c_e_posta"></td>
+                <td><input type="email" name="c_e_posta" id="c_e_posta"></td>
             </tr>
             <tr>
                 <td>Facebook</td>

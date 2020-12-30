@@ -8,8 +8,10 @@
         if(!isset($_SESSION["login"])){//Session kontrol
             header("Location:../adminError.php");
         }
-   
-        $silinecek_calisan_id = $_POST['id'];
+        
+        if(isset($_GET['ID'])){
+
+        $silinecek_calisan_id = $_GET['ID'];
 
         $sql = "DELETE FROM calisanlar WHERE id= '$silinecek_calisan_id'";
         $result = mysqli_query($conn, $sql);
@@ -19,5 +21,5 @@
         }else{
             echo "Silme başarısız." . "<a href = 'veri_al.php'> Tıkla </a>";
         }
-
+    }
 ?>
