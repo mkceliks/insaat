@@ -77,13 +77,8 @@
 
 <table id="tablo">
     <tr>
-        <td> <a class="link"  href="veriyiekle.php"> Veri eklemek için tıkla </a>  </td>
+        <td> <a class="link"  href="veriyiekle.php"> Veri eklemek için tıkla </a> <a class="linkred" href='../adminAnaSayfa.php'>Geri dönmek için tıkla</a> </td>
     </tr>
-    <tr><td><a class="linkred" href='../adminAnaSayfa.php'>Geri dönmek için tıkla</a></td></tr>
-
-
-
-
 </table>
     
 </body>
