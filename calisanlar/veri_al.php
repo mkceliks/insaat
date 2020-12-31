@@ -24,14 +24,14 @@
     echo "<table id=tablo>
     <tr>
         
-        <td> İsim Soyad </td>
-        <td> E - posta</td>
-        <td> Facebook </td>
-        <td> Twitter </td>
-        <td> Instagram </td>
-        <td> Departman </td>
-        <td> Telefon </td>
-        <td> Adres </td>
+        <th> İsim Soyad </th>
+        <th> E - posta</th>
+        <th> Facebook </th>
+        <th> Twitter </th>
+        <th> Instagram </th>
+        <th> Departman </th>
+        <th> Telefon </th>
+        <th> Adres </th>
 
     </tr>
 
@@ -52,7 +52,7 @@
                     <td> {$row['departman']}</td>
                     <td> {$row['telefon']}</td>
                     <td> {$row['adres']}</td>
-                    <td> <a href = 'sil.php?ID= ".$row['id']." '> Sil </a> </td>
+                    <td> <a class='linkred' href = 'sil.php?ID= ".$row['id']." '> Sil </a> </td>
                     
 
                 </tr>
@@ -65,6 +65,7 @@
         echo "<br>";
 
     }
+
     echo "</table>"; 
 
 
@@ -74,10 +75,12 @@
 
 ?>
 
-<table>
+<table id="tablo">
     <tr>
-        <td> <button><a style="color:black; text-decoration:none;" href="veriyiekle.php"> Veri eklemek için tıkla </a></button> </td>
+        <td> <a class="link"  href="veriyiekle.php"> Veri eklemek için tıkla </a>  </td>
     </tr>
+    <tr><td><a class="linkred" href='../adminAnaSayfa.php'>Geri dönmek için tıkla</a></td></tr>
+
 
 
 

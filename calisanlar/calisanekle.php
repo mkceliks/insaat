@@ -28,9 +28,9 @@
         $result = mysqli_query($conn, $sql);
         
         if($result){
-            echo "Ekleme başarılı." . "<a href = 'veri_al.php'> Tıkla </a>";
+            echo "<script>alert('Ekleme başarılı.Yönlendiriliyorsunuz lütfen bekleyiniz...')</script>" . header("Refresh: 3; url=veri_al.php");;
         }else{
-            echo "Ekleme başarısız.";
+            echo "<script>alert('Ekleme başarısız.Yönlendiriliyorsunuz lütfen bekleyiniz...')</script>" . header("Refresh: 3; url=veri_al.php");; 
         }
 
 

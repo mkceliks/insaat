@@ -17,9 +17,9 @@
         $result = mysqli_query($conn, $sql);
 
         if($result){
-            echo "Silme başarılı." . "<a href = 'veri_al.php'> Tıkla </a>";
+            echo "<script>alert('Silme başarılı.Yönlendiriliyorsunuz lütfen bekleyiniz...')</script>" . header("Refresh: 3; url=veri_al.php");;
         }else{
-            echo "Silme başarısız." . "<a href = 'veri_al.php'> Tıkla </a>";
+            echo "<script>alert('Silme başarısız!!.Yönlendiriliyorsunuz lütfen bekleyiniz...')</script>" . header("Refresh: 3; url=veri_al.php");;
         }
     }
 ?>

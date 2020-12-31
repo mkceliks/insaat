@@ -5,7 +5,9 @@
     <meta http-equiv="Content-Type" content = "text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content = "tr">
     <meta charset="UTF-8">
-    
+
+    <link rel="stylesheet" href="../css/random.css">
+
     <title>Calisan Ekle</title>
 </head>
 <body>
@@ -15,60 +17,50 @@
     ob_start();
 
 
-    if(!isset($_SESSION["login"])){//Session kontrol
+    if(!isset($_SESSION["login"])){ //Session kontrol
         header("Location:../adminError.php");
     }
 
     ?>
+    <div class="container">
     <form action="calisanekle.php" method = "post" enctype="multipart/form-data">
-        <table>
-            <tr>
-                <td>İsim Soyisim</td>
-                <td><input type="text" name="c_isim" id="c_isim"></td>
-            </tr>
-            <tr>
-                <td>E-posta</td>
-                <td><input type="email" name="c_e_posta" id="c_e_posta"></td>
-            </tr>
-            <tr>
-                <td>Facebook</td>
-                <td><input type="text" name="c_facebook" id= "c_facebook"></td>
-            </tr>
-            <tr>
-                <td>Twitter</td>
-                <td><input type="text" name="c_twitter" id = "c_twitter"></td>
-            </tr>
-            <tr>
-                <td>Instagram</td>
-                <td><input type="text" name="c_instagram" id = "c_instagram"></td>
-            </tr>
-            <tr>
-                <td>Departman</td>
-                <td><input type="text" name="c_departman" id = "c_departman"></td>
-            </tr>
-            <tr>
-                <td>Telefon</td>
-                <td><input type="text" name="c_telefon" id= "c_telefon"></td>
-            </tr>
-            <tr>
-                <td>Adres</td>
-                <td><input type="text" name="c_adres" id="c_adres"></td>
-            </tr>
+        
+            <label for="c_isim"><b>Isim Soyisim</b></label>
+            <input class="input" type="text" name="c_isim" id="c_isim">
             
-            <tr>
-                <td><input type="submit" value="Ekle"></td>
+            
+            <label for="c_e_posta"><b>E-posta</b></label>
+            <input class="input" type="email" name="c_e_posta" id="c_e_posta">
+           
+            <label for="c_facebook"><b>Facebook</b></label>
+            <input class="input" type="text" name="c_facebook" id= "c_facebook">
+            
+            
+            <label for="c_twitter"><b>Twitter</b></label>
+            <input class="input" type="text" name="c_twitter" id = "c_twitter">
+            
+            
+            <label for="c_instagram"><b>Instagram</b></label>
+            <input class="input" type="text" name="c_instagram" id = "c_instagram">
+            
+            
+            <label for="c_departman"><b>Departman</b></label>
+            <input class="input" type="text" name="c_departman" id = "c_departman">
+            
+            
+            <label for="c_telefon"><b>Telefon</b></label>
+            <input class="input" type="text" name="c_telefon" id= "c_telefon">
+            
+            
+            <label for="c_adres"><b>Adres</b></label>
+            <input class="input" type="text" name="c_adres" id="c_adres">
+            
+            <input class="input" type="submit" value="Ekle">
+
+            <a class="linkred2" href="veri_al.php">Geri dönmek için tıklayınız</a>
                 
-            </tr>
-
-            
-
-
-
-
-        </table>
-
-
     </form>
+</div>
 
 
 
