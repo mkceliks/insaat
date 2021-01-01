@@ -31,6 +31,7 @@
         <th> Instagram </th>
         <th> Departman </th>
         <th> Telefon </th>
+        <th> Resim </th>
         <th> Adres </th>
 
     </tr>
@@ -51,7 +52,9 @@
                     <td> {$row['instagram']}</td>
                     <td> {$row['departman']}</td>
                     <td> {$row['telefon']}</td>
+                    <td> {$row['resim']} </td>
                     <td> {$row['adres']}</td>
+                    <td> <a class='link' href = 'calisanresmisec.php?ID= ".$row['id']." '> Resim seç </a> </td>
                     <td> <a class='linkred' href = 'sil.php?ID= ".$row['id']." '> Sil </a> </td>
                     
 
