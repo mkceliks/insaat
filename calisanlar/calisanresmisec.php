@@ -44,6 +44,7 @@ width='150' height='200' border='2'></a>";
 
 }
 echo" </br></br></br>";
+echo "Yeni resim eklemek için <a href='../resimler/resimAl.php'>tıklayınız.</a>";
 
 
 

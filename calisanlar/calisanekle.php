@@ -13,12 +13,13 @@
         $c_telefon = $_POST['c_telefon'];
         
         $c_adres = $_POST['c_adres'];
+        $c_maas = $_POST['c_maas'];
 
 
 
 
-        $sql = "INSERT INTO calisanlar (isim_soyad,e_posta,facebook,twitter,instagram,departman,telefon, adres) 
-        VALUES ('$c_isim', '$c_e_posta', '$c_facebook', '$c_twitter', '$c_instagram', '$c_departman', '$c_telefon', '$c_adres')";
+        $sql = "INSERT INTO calisanlar (isim_soyad,e_posta,facebook,twitter,instagram,departman,telefon, adres, maas) 
+        VALUES ('$c_isim', '$c_e_posta', '$c_facebook', '$c_twitter', '$c_instagram', '$c_departman', '$c_telefon', '$c_adres', '$c_maas')";
 
         $result = mysqli_query($conn, $sql);
         

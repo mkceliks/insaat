@@ -48,6 +48,9 @@
             
             <label for="c_adres"><b>Adres</b></label>
             <input class="input" type="text" name="c_adres" id="c_adres">
+
+            <label for="c_maas"><b>Maaş</b></label>
+            <input class="input" type="number" name="c_maas" id="c_maas" pattern="\d{11}">
             
             <input class="input" type="submit" value="Ekle">
 

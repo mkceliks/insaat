@@ -19,15 +19,15 @@ if(isset($_GET['resimisim'])){
         $sorgu = $conn->prepare("UPDATE calisanlar SET resim = ? WHERE id = '$KIMLIK'");
         $sorgu->bind_param("s", $resimad);
         $sorgu->execute();
-        echo "Ekleme başarılı devam etmek için <a href='veriyial.php'>tıklayınız</a>";
+        echo "Ekleme başarılı devam etmek için <a href='veri_al.php'>tıklayınız</a>";
         
         
         
 
-    }else{echo "HATA <a href='veriyial.php'>tıklayınız</a>";}
+    }else{echo "HATA <a href='veri_al.php'>tıklayınız</a>";}
     
-    }else{echo "HATA <a href='veriyial.php'>tıklayınız</a>" ;}
-}else{echo "HATA <a href='veriyial.php'>tıklayınız</a>";}
+    }else{echo "HATA <a href='veri_al.php'>tıklayınız</a>" ;}
+}else{echo "HATA <a href='veri_al.php'>tıklayınız</a>";}
 
 
 ?>
