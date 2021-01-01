@@ -1,4 +1,4 @@
-<?php include_once "../server.php"; ?>
+<?php include_once "../server.php"; include_once "../session.php"; ?>
 <!DOCTYPE html>
 <html lang="tr-TR">
 <head>
@@ -14,20 +14,15 @@
 
 //resimAl.php den gelen resim burada klasöre eklenir ve yolu db ye kaydedilir
 
-session_start();
-ob_start();
-        
-        
-if(!isset($_SESSION["login"])){//Session kontrol
-    header("Location:../adminError.php");
-}
+
 
 
 
 if ($_FILES["dosya"]["size"]>1) {
   $resim_isim = $_FILES["dosya"]["name"];
+  $nereye = $_POST['radio'];
 
-  $yol = "../images"; # Yüklenecek klasör / dizin
+  $yol = "../images" . "/{$nereye}"; # Yüklenecek klasör / dizin
 
   $yuklemeYeri = __DIR__ . "/" . $yol . "/" . $_FILES["dosya"]["name"];
   $yol_2 = $yol . "/" . $_FILES["dosya"]["name"];

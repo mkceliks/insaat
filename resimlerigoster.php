@@ -1,9 +1,10 @@
 <?php
 # Resimleri cek
+include_once "session.php";
 
 
 
-$dizin = "images";//Resminizin Bulunduğu Yolu Yazınız
+$dizin = "images" ;//Resminizin Bulunduğu Yolu Yazınız
 $tutucu = opendir($dizin);
 while($dosya = readdir($tutucu)){
 if(is_file($dizin."/".$dosya))

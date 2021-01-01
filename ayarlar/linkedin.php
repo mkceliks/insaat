@@ -1,4 +1,4 @@
-<?php include_once '../server.php'; ?>
+<?php include_once '../server.php'; include_once "../session.php"; ?>
 <!DOCTYPE html>
 <html lang="tr-TR">
 <head>
@@ -12,14 +12,7 @@
     <?php 
         //İÇERİĞİ ÇEK
 
-        session_start();
-        ob_start();
         
-        
-        if(!isset($_SESSION["login"])){//Session kontrol
-            header("Location:../adminError.php");
-        }
-
         $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi='linkedin'";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);

@@ -1,13 +1,8 @@
 <?php
         include_once "../server.php";
+        include_once "../session.php";
 
-        session_start();
-        ob_start();
         
-        
-        if(!isset($_SESSION["login"])){//Session kontrol
-            header("Location:../adminError.php");
-        }
    
         $c_isim = $_POST['c_isim'];
         $c_e_posta = $_POST['c_e_posta'];

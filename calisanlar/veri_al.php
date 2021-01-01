@@ -1,4 +1,4 @@
-<?php include_once "../server.php"; ?>
+<?php include_once "../server.php"; include_once "../session.php"; ?>
 <!DOCTYPE html>
 <html lang="tr-TR">
 <head>
@@ -10,13 +10,7 @@
 </head>
 <body>
 <?php
-    session_start();
-    ob_start();
     
-    
-    if(!isset($_SESSION["login"])){//Session kontrol
-        header("Location:../adminError.php");
-    }
 
     $sql = "SELECT * FROM calisanlar ";
 
@@ -54,8 +48,9 @@
                     <td> {$row['telefon']}</td>
                     <td> {$row['resim']} </td>
                     <td> {$row['adres']}</td>
-                    <td> <a class='link' href = 'calisanresmisec.php?ID= ".$row['id']." '> Resim seç </a> </td>
-                    <td> <a class='linkred' href = 'sil.php?ID= ".$row['id']." '> Sil </a> </td>
+                    <td> <a class='link' href = 'calisanresmisec.php?ID=".$row['id']." '> Resim seç </a> </td>
+                    <td> <a class='link' href = 'calisanduzenle.php?ID=".$row['id']." '> Düzenle </a> </td>
+                    <td> <a class='linkred' href = 'sil.php?ID=".$row['id']." '> Sil </a> </td>
                     
 
                 </tr>

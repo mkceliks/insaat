@@ -1,6 +1,7 @@
 <?php
+include_once "../session.php";
 
-include_once "../server.php";
+
 
 
 
@@ -36,7 +37,7 @@ if($toplam<1){
 # $kactan başlayıp $kaca kadar resim bas
 for($i=0; $i < $toplam; $i++){
 echo "
-<a href='calisanresmisec.php?resimisim=". $resim[$i]. " '>
+<a href='calisanresimekle.php?resimisim=".$resim[$i]."&ID=" . "$KIMLIK" . " '>
 <img onContextMenu='return false' src='".$dizin."/".$resim[$i]."'
 width='150' height='200' border='2'></a>";
 
@@ -44,21 +45,6 @@ width='150' height='200' border='2'></a>";
 }
 echo" </br></br></br>";
 
-if(isset($_GET['resimisim'])){
-    
-    
-    $resimad = $_GET["resimisim"];
-    
-    $sql = "SELECT isim_soyad FROM calisanlar WHERE id= '$KIMLIK' ";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    if($row['isim_soyad']){
-        $sql = "UPDATE calisanlar SET resim = '$resimad' WHERE id = '$KIMLIK'";
-        
-        
 
-    }else{echo "mevbut değil.";}
-    
-}
 
 ?>

@@ -10,21 +10,33 @@
 <body>
 
     <?php 
-    session_start();
-    ob_start();
-    
-    
-    if(!isset($_SESSION["login"])){//Session kontrol
-        header("Location:../adminError.php");
-    }
+    include_once "../session.php";
 
     
     
     ?>
     <form action="resim.php" method="post" enctype="multipart/form-data">
-        <p>Yüklenecek dosyayı seçin:</p>
-        <input type="file" name="dosya" />
-        <input type="submit" value="Yükle" />
+        <table>
+        <tr>
+            <td><p>Yüklenecek dosyayı seçin:</p></td>
+            
+        </tr>
+        
+        <tr><td><input type="file" name="dosya" /></td></tr>
+        <tr>
+            <td><input type="radio" id="calisanlar" name="radio" value="calisanlar">
+                <label for="calisanlar">Çalışan</label><br>
+                
+                <input type="radio" id="calisanlar" name="radio" value="projeler">
+                <label for="projeler">Proje</label><br>
+            </td>
+        
+        </tr>
+        <tr>
+            <td>   <input type="submit" value="Yükle" /> </td>
+        </tr>
+      
+        </table>
     </form>
     
 </body>

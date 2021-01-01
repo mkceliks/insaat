@@ -141,6 +141,7 @@
             </div>
          </nav>
       </header>
+      
       <div id="home" class="parallax first-section" data-stellar-background-ratio="0.4" style="background-image:url('uploads/building/slide-img1.png');">
          <div class="container">
             <div class="row">
@@ -625,7 +626,17 @@
                            </div>
                            <div class="info-content">
                               <h6 class="uppercase"> Address:</h6>
-                              <p> 1010 Berkler avenue, Brooklyn New York City, NY 10018 US</p>
+                              <p> 
+                              <?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'adres'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $adres_icerik = $row['icerik'];
+                                 echo $adres_icerik;
+                     
+                              ?>
+                              </p>
                            </div>
                         </li>
                         <li>
