@@ -77,6 +77,33 @@
   text-align: center;
 }
 
+#tablo1 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+ margin-left: 135px; 
+}
+
+#tablo1 td, #tablo1 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  
+}
+
+#tablo1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#tablo1 tr:hover {background-color: #ddd;}
+
+#tablo1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
 .input[type=text]{
   width: 100%;
   padding: 12px 20px;
@@ -120,3 +147,19 @@ div.container {
   padding: 20px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#yourBtn {
+  position: relative;
+  font-family: calibri;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px dashed #BBB;
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+

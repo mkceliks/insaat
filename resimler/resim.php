@@ -20,7 +20,7 @@
 
 if ($_FILES["dosya"]["size"]>1) {
   $resim_isim = $_FILES["dosya"]["name"];
-  $nereye = $_POST['radio'];
+  $nereye = $_POST['secmece'];
 
   $yol = "../images" . "/{$nereye}"; # Yüklenecek klasör / dizin
 
