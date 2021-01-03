@@ -8,7 +8,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- Site Metas -->
-   <title>Constructed - Responsive HTML5 Landing Page Template</title>
+   <title>Koyukan İnşaat</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -685,26 +685,18 @@
                      <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
                         <fieldset class="row-fluid">
                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Adınız">
+                              <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Adınız(Zorunlu)" required>
                            </div>
                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Soyadınız">
+                              <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Soyadınız(Zorunlu)" required>
                            </div>
                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                               <input type="email" name="email" id="email" class="form-control" placeholder="E-mail adresiniz">
                            </div>
                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" name="phone" id="phone" class="form-control" placeholder="Siteniz">
+                              <input type="text" name="phone" id="phone" class="form-control" placeholder="Telefonunuz(Zorunlu)" required>
                            </div>
-                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <label class="sr-only">Select Department</label>
-                              <select name="select_service" id="select_service" class="selectpicker form-control" data-style="btn-white">
-                                 <option value="12">Servis seçin</option>
-                                 <option value="Building Service">Building Service</option>
-                                 <option value="Tover Design">Tover Design</option>
-                                 <option value="Others">Others</option>
-                              </select>
-                           </div>
+                           
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Daha fazla detay vermek ister misiniz?"></textarea>
                            </div>

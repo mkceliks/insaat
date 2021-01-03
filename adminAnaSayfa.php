@@ -102,6 +102,25 @@
 
 
         <tr>
+        <th>İletiler</th>
+        <th>Işlem</th>
+        </tr>
+
+        <tr>
+            <td>İletiler için </td><td> <a  class="link" href="iletisim/iletisim.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+        <th>Resimler</th>
+        <th>Işlem</th>
+        </tr>
+
+        <tr>
+            <td>Tüm resimleri görmek için</td><td> <a  class="link"href="resimler/tum_resimleri_goster.php">Tıklayınız.</a></td>
+        </tr>
+
+
+        <tr>
         
 
         <th style="background-color: #c01c33;">Çıkış</th>
