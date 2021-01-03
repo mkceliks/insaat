@@ -88,7 +88,7 @@
         </tr>
 
         <tr>
-            <td>Proje için </td><td> <a  class="link"href="proje/projeler.php">Tıklayınız.</a></td>
+            <td>Proje için </td><td> <a  class="link"href="projeler/projeleri_al.php">Tıklayınız.</a></td>
         </tr>
 
         <tr>

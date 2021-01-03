@@ -37,50 +37,54 @@
     <table id="tablo">
         <tr>
         <td>İsim Soyad :</td>
-        <td> <input type="text" name="isim" id="isim" value = <?php echo $c_isim_soyad; ?>> </td>
+        <td> <textarea name="isim" id="isim" cols="45" rows="1" style="resize:none;"><?php echo $c_isim_soyad; ?> </textarea></td>
         </tr>
 
         <tr>
         <td>E-posta :</td>
-        <td> <input type="email" name="e_posta" id="e_posta" value = <?php echo $c_e_posta; ?>> </td>
+        <td> <textarea name="e_posta" id="e_posta" cols="45" rows="1" style="resize:none;"><?php echo $c_e_posta; ?> </textarea></td>
         </tr>
 
         <tr>
         <td>Facebook :</td>
-        <td> <input type="text" name="facebook" id="facebook" value = <?php echo $c_facebook; ?>> </td>
+        <td> <textarea name="facebook" id="facebook" cols="45" rows="1" style="resize:none;"><?php echo $c_facebook; ?> </textarea></td>
         </tr>
 
         <tr>
         <td>Twitter :</td>
-        <td> <input type="text" name="twitter" id="twitter" value = <?php echo $c_twitter; ?>> </td>
+        <td> <textarea  name="twitter" id="twitter" cols="45" rows="1" style="resize:none;"><?php echo $c_twitter; ?> </textarea></td>
         </tr>
 
         <tr>
         <td>Instagram :</td>
-        <td> <input type="text" name="instagram" id="instagram" value = <?php echo $c_instagram; ?>> </td>
+        <td> <textarea  name="instagram" id="instagram" cols="45" rows="1" style="resize:none;"><?php echo $c_instagram; ?></textarea></td>
         </tr>
 
         <tr>
         <td>Departman :</td>
-        <td> <input type="text" name="departman" id="departman" value = <?php echo $c_departman; ?>> </td>
+        <td> <textarea name="departman" id="departman" cols="45" rows="1" style="resize:none;"><?php echo $c_departman; ?></textarea></td>
         </tr>
 
         
 
         <tr>
         <td>Telefon :</td>
-        <td> <input type="text" name="telefon" id="telefon" value = <?php echo $c_telefon; ?>> </td>
+        <td> <textarea  name="telefon" id="telefon" cols="45" rows="1" style="resize:none;"><?php echo $c_telefon; ?></textarea></td>
         </tr>
 
         <tr>
         <td>Adres :</td>
-        <td> <input type="text" name="adres" id="adres" value = <?php echo $c_adres; ?>> </td>
+        <td> <textarea name="adres" id="adres" cols="45" rows="1" style="resize:none;"><?php echo $c_adres; ?> </textarea></td>
         </tr>
 
         <tr>
         <td>Maaş :</td>
-        <td> <input type="number" name="maas" id="maas" pattern="\d{11}" value = <?php echo $c_maas; ?>> </td>
+        <td> <input type="number" name="maas" id="maas" pattern="\d{11}" value =<?php echo $c_maas; ?>> </td>
         </tr>
+
+        
+
+
 
 
         
@@ -116,11 +120,10 @@
         $sorgu->execute();
 
         if ($sorgu->affected_rows > 0) {
-            echo "İşlem başarılı!!!";
-            header("Refresh:2 url='veri_al.php'");
+            echo "İşlem başarılı!!! Geri dönmek için <a href='veri_al.php'>tıklayınız</a>";
             
         }else {
-             echo "HATA.";
+             echo "HATA!! Geri dönmek için <a href='veri_al.php'>tıklayınız</a>";
         }
 
         
