@@ -42,7 +42,7 @@
 
         <tr>
         
-        <td> <input type="submit"  value = "Tamamla" ></td>
+        <td> <input type="submit" name="submit" id="submit" value = "Tamamla" ></td>
         </tr>
     
 
@@ -53,7 +53,7 @@
 
     <?php 
 
-    if(isset($_POST["p_ismi"]) && $_POST["p_icerik"]){
+    if(isset($_POST["submit"])){
         $yeni_p_ismi= $_POST["p_ismi"];
         $yeni_p_icerik = $_POST["p_icerik"];
         

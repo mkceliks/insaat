@@ -91,7 +91,7 @@
 
         <tr>
         
-        <td> <input type="submit"  value = "Tamamla" ></td>
+        <td> <input type="submit" name="submit" id="submit" value = "Tamamla" ></td>
         </tr>
     
 
@@ -102,7 +102,7 @@
 
     <?php 
 
-    if(isset($_POST["isim"]) && $_POST["e_posta"]&&$_POST["facebook"]&&$_POST["twitter"]&&$_POST["departman"]&&$_POST["telefon"]&&$_POST["adres"]&&$_POST["maas"]){
+    if(isset($_POST['submit'])){
         $yeni_isim_soyad = $_POST["isim"];
         $yeni_e_posta = $_POST["e_posta"];
         $yeni_facebook = $_POST["facebook"];
