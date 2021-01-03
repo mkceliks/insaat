@@ -22,13 +22,15 @@ $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_assoc($result)){
    echo "
    
-    <div>
-    <a href='".$row['r_yol']."' target='_blank'>
+    <table style='float : left'>
+    <tr>
+    <td><a href='".$row['r_yol']."' target='_blank'> 
     <img onContextMenu='return false' src='".$row['r_yol']."'
-    width='150' height='200' border='2'></a> </div>
+    width='207' height='200' border='2' style='float:left;' ></a></td></tr>
     
     
-    <a class='linkred' href = 'resimsil.php?yol=".$row['r_yol']." '> Sil </a>
+    <tr><td><a class='linkred' style='width:110px;' href = 'resimsil.php?yol=".$row['r_yol']." '> Sil  </a> </td> </tr>
+    </table>
     ";
 
     
@@ -39,7 +41,7 @@ while($row = mysqli_fetch_assoc($result)){
 
 
 echo "<br><br><br>";
-echo "Yeni resim eklemek için <a href='resimAl.php'>tıkla</a>";
+echo "Yeni resim eklemek için <a  href='resimAl.php'>+</a>";
 
 
 
