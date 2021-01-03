@@ -18,7 +18,7 @@
     <tr>
         
         <th> İsim </th>
-        <th> Soyisim İçeriği</th>
+        <th> Soyisim</th>
         <th> Mail </th>
         <th> Telefon </th>
         <th> İçerik </th>

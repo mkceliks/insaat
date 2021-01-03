@@ -8,7 +8,7 @@
 
         $silinecek_iletisim_id = $_GET['iletisim_id'];
 
-        $sql = "DELETE FROM projeler WHERE pid= '$silinecek_iletisim_pid'";
+        $sql = "DELETE FROM iletiler WHERE iletisim_id= '$silinecek_iletisim_id'";
         $result = mysqli_query($conn, $sql);
 
         if($result){

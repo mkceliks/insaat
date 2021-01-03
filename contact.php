@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content = "text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content = "tr">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/random.css">
+    <link rel="stylesheet" href="css/random.css">
     <title>İletişim</title>
 </head>
 <body>
