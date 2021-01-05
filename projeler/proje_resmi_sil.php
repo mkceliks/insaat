@@ -1,7 +1,8 @@
 <?php
 # Resimleri cek
 
-include_once "server.php";
+include_once "../server.php";
+include_once "../session.php";
 
 
 
@@ -18,20 +19,19 @@ if(isset($_GET['pid'])){
     $resimler = explode("*", $row['p_resimler']);
 
     $toplam = count($resimler)-1;
-    $dizin = "images/projeler";
+    $dizin = "../images/projeler";
 
     
-    echo "
-    <h3><center>  $isim  </center></h3>
-        <p> $icerik </p>
-    ";
+
     for($i=0; $i < $toplam; $i++){
         echo "
         
-        <a href='".$dizin."/".$resimler[$i]."' target='_blank'>
+        <a href='p_resim_sil_arkaplan.php?pid=".$pid."&resim=".$resimler[$i]."' >
         <img onContextMenu='return false' src='".$dizin."/".$resimler[$i]."'
         width='150' height='200' border='2'></a>";
         }
+
+        
 
 
 }

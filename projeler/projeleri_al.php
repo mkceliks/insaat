@@ -36,7 +36,7 @@
                     
                     <td> {$row['p_ismi']}</td>
                     <td> {$row['p_icerik']}</td>
-                    <td> {$row['p_resimler']}</td>
+                    <td>{$row['p_resimler']}</td>
                    
                    
                    

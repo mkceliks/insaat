@@ -39,9 +39,14 @@
         <td>Proje İçeriği</td>
         <td> <textarea type="text" name="p_icerik" id="p_icerik" cols="45" rows="10" ><?php echo $p_icerik; ?></textarea></td>
         </tr>
+
+        <tr>
+        <td>Resim Silme</td>
+        <td> <a href="proje_resmi_sil.php?pid=<?php echo $pid;?>"><input type="button" value="Düzenle"> </a></td>
+        </tr>
     </table>
     <div style="text-align: middle;">
-<table style="margin:auto;margin-top: 25px; width: 20%"><tr>
+    <table style="margin:auto;margin-top: 25px; width: 20%"><tr>
         
         <td> <input style="width: 100%;" class="input" type="submit" name="submit" id="submit" value = "Tamamla" ></td>
         </tr>
