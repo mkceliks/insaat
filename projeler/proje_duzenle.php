@@ -29,7 +29,7 @@
     ?>
 
     <form action="" method="POST">
-    <table id="tablo">
+    <table style="margin-top: 50px;" id="tablo">
         <tr>
         <td>Proje İsmi</td>
         <td> <textarea  name="p_ismi" id="p_ismi"  cols="45" rows="1" style="resize:none;"><?php echo $p_ismi; ?></textarea></td>
@@ -37,17 +37,16 @@
 
         <tr>
         <td>Proje İçeriği</td>
-        <td> <textarea type="text" name="p_icerik" id="p_icerik" cols="20" rows="10" ><?php echo $p_icerik; ?></textarea></td>
+        <td> <textarea type="text" name="p_icerik" id="p_icerik" cols="45" rows="10" ><?php echo $p_icerik; ?></textarea></td>
         </tr>
-
-        <tr>
-        
-        <td> <input type="submit" name="submit" id="submit" value = "Tamamla" ></td>
-        </tr>
-    
-
-    
     </table>
+    <div style="text-align: middle;">
+<table style="margin:auto;margin-top: 25px; width: 20%"><tr>
+        
+        <td> <input style="width: 100%;" class="input" type="submit" name="submit" id="submit" value = "Tamamla" ></td>
+        </tr>
+    </table>
+    </div>
     
     </form>
 
@@ -63,13 +62,15 @@
         $sorgu->bind_param("ss",$yeni_p_ismi, $yeni_p_icerik );
         $sorgu->execute();
 
-        if ($sorgu->affected_rows > 0) {
-            echo "İşlem başarılı!!! Geri dönmek için <a href='projeleri_al.php'>tıklayınız</a>";
-            
-            
-        }else {
-            echo "HATA!!! Geri dönmek için <a href='projeleri_al.php'>tıklayınız</a>";
-        }
+         if ($sorgu->affected_rows > 0) {
+                echo "<br><p style='text-align:center;'>İşlem başarılı!!!<br></p>";
+                echo "<div style='text-align:center;'> <a class='link' href='projeleri_al.php'>Çıkmak için tıklayın</a></div>";
+                
+            }else {
+
+                echo "<br><p style='text-align:center;'>HATA!!<br></p>";
+                echo "<div style='text-align:center;'> <a class='linkred' href='projeleri_al.php'>Çıkmak için tıklayın</a></div>"; 
+            }  
 
         
     }

@@ -19,6 +19,7 @@ include_once "../server.php";
 $sql = "SELECT * FROM resimler";
 $result = mysqli_query($conn, $sql);
 
+
 while($row = mysqli_fetch_assoc($result)){
    echo "
    
@@ -26,10 +27,10 @@ while($row = mysqli_fetch_assoc($result)){
     <tr>
     <td><a href='".$row['r_yol']."' target='_blank'> 
     <img onContextMenu='return false' src='".$row['r_yol']."'
-    width='207' height='200' border='2' style='float:left;' ></a></td></tr>
+    width='200' height='200' border='2' style='float:left;' ></a></td></tr>
     
     
-    <tr><td><a class='linkred' style='width:110px;' href = 'resimsil.php?yol=".$row['r_yol']." '> Sil  </a> </td> </tr>
+    <tr><td><a class='linkred' style='width:79%;' href = 'resimsil.php?yol=".$row['r_yol']." '> Sil  </a> </td> </tr>
     </table>
     ";
 
@@ -38,10 +39,8 @@ while($row = mysqli_fetch_assoc($result)){
 }
 
 
-
-
-echo "<br><br><br>";
-echo "Yeni resim eklemek için <a  href='resimAl.php'>+</a>";
+echo "
+<a style='margin-left:5px;margin-top:3px;' class='link' href='../resimler/resimAl.php'><img style='margin-top:10px;' width='150' height='167' src='../images/arti_simgesi.png'></a>";
 
 
 

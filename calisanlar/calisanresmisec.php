@@ -1,10 +1,16 @@
 <?php
 include_once "../session.php";
+?>
 
 
-
-
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="../css/random.css">
+</head>
+<body>
+	<?php
 if(isset($_GET['ID'])){
  $KIMLIK = (int) $_GET['ID'];
 }
@@ -37,15 +43,29 @@ if($toplam<1){
 # $kactan başlayıp $kaca kadar resim bas
 for($i=0; $i < $toplam; $i++){
 echo "
+<table  style='padding-left:18px;float:left;'>
+
+    <tr><td>
 <a href='calisanresimekle.php?resimisim=".$resim[$i]."&ID=" . "$KIMLIK" . " '>
 <img onContextMenu='return false' src='".$dizin."/".$resim[$i]."'
-width='150' height='200' border='2'></a>";
+width='150' height='200' border='2' style='float:left;'></a>
+<td></tr>
+
+<th><p  style='text-align:center;width:170px;height:100px;margin-bottom:5px;'>$resim[$i]</p></th>
+    </table>
+    ";
 
 
 }
-echo" </br></br></br>";
-echo "Yeni resim eklemek için <a href='../resimler/resimAl.php'>tıklayınız.</a>";
+echo "
+<a style='margin-left:5px;margin-top:3px;' class='link' href='../resimler/resimAl.php'><img style='margin-top:10px;' width='150' height='167' src='../images/arti_simgesi.png'></a>";
+
 
 
 
 ?>
+</body>
+</html>
+
+
+

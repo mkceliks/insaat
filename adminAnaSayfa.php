@@ -12,9 +12,9 @@
     <?php 
         include_once "session.php";
     ?>
-    <table id="tablo">
+    <table  id="tablo">
 
-        <tr>
+        <tr >
         <th>Yazılar</th>
         <th>Işlem</th>
         </tr>
@@ -128,7 +128,7 @@
 
         </tr>
         <tr>
-            <td>Güvenli çıkış için </td><td> <a class="linkred" href="guvenliCikis.php">Tiklayiniz.</a></td>
+            <td>Güvenli çıkış için </td><td> <a style="background-color: #c01c33;color: white;" class="linkred" href="guvenliCikis.php">Tiklayiniz.</a></td>
         </tr>
 
     

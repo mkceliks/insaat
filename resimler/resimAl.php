@@ -44,6 +44,12 @@
     </tr>
      
 </table>
+<table id="tablo1">
+    <tr>
+        <td>
+            <a class="linkred" href='../projeler/projeleri_al.php'>Geri dönmek için tıkla</a> </td>
+    </tr>
+</table>
         </table>
         
 

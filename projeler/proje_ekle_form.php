@@ -17,18 +17,19 @@
 
     ?>
     <div class="container">
-    <form action="proje_ekle.php" method = "post" enctype="multipart/form-data">
+    <form action="proje_ekle.php" method = "post" >
         
             <label for="p_ismi"><b>Proje Adı</b></label>
-            <input class="input" type="text" name="p_ismi" id="p_ismi">
-            
-            
-            <label for="p_icerik"><b>İçerik</b></label>
-            <textarea name="p_icerik" id="p_icerik" cols="20" rows="10" ></textarea>
+            <input style="border:1px solid;" class="input" type="text" name="p_ismi" id="p_ismi">
+        
+            <div style="padding-top: 3px;padding-bottom: 3px;">
+            <label for="p_icerik"><b>İçerik<br></b></label>
+            </div>
+            <textarea name="p_icerik" id="p_icerik" style="width:100%" rows="10" ></textarea>
            
             
             
-            <input class="input" type="submit" value="Ekle">
+            <input class="input" type="submit" name="submit" value="Ekle">
 
             <a class="linkred2" href="projeleri_al.php">Geri dönmek için tıklayınız</a>
                 

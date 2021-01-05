@@ -46,9 +46,12 @@
                    
                     
                     <td> <a class='linkred' href = 'iletisim_sil.php?iletisim_id=".$row['iletisim_id']." '> Sil </a> </td>
-                    
+                    </tr>
+                    <table id='tablo'>
+                   <td> <a style='background-color:#c01c33;color: white;width:50%;' class='linkred' href='../adminAnaSayfa.php'>Ana Sayfa Için Tıklayınız...</a></td>
+</table>
 
-                </tr>
+                
 
            
         ";

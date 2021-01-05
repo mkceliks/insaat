@@ -1,18 +1,21 @@
 <?php
 include_once "../session.php";
 include_once "../server.php";
+?>
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="../css/random.css">
 
+</head>
+<body>
 
-
-
-if(isset($_GET['pid'])){
+<?php
+	if(isset($_GET['pid'])){
  $KIMLIK = (int) $_GET['pid'];
 }
-
-    
-    
-
 
 $resim = array();
 $dizin = "../images/projeler" ;//Resminizin Bulunduğu Yolu Yazınız
@@ -40,16 +43,35 @@ $row = mysqli_fetch_assoc($result);
  
 # $kactan başlayıp $kaca kadar resim bas
 for($i=0; $i < $toplam; $i++){
+
 echo "
-<a href='proje_resim_ekle.php?resimisim=".$row['p_resimler'].$resim[$i]."*"."&pid=" . "$KIMLIK" . " '>
+<table  style='padding-left:18px;float:left;'>
+
+    <tr><td>
+<a href='proje_resim_ekle.php?resimisim=".$row['p_resimler'].$resim[$i]."*"."&pid=" . "$KIMLIK" . "'>
 <img onContextMenu='return false' src='".$dizin."/".$resim[$i]."'
-width='150' height='200' border='2'></a>";
+width='150' height='200' border='2' style='float:left;'></a>
+	<td></tr>
 
 
+<th><p  style='text-align:center;width:170px;height:100px;margin-bottom:5px;'>$resim[$i]</p></th>
+    </table>
+    ";
 }
-echo" </br></br></br>";
-echo "Yeni resim eklemek için <a href='../resimler/resimAl.php'>tıklayınız.</a>";
+
+echo "
+<a style='margin-left:5px;margin-top:3px;' class='link' href='../resimler/resimAl.php'><img style='margin-top:10px;' width='150' height='167' src='../images/arti_simgesi.png'></a>";
 
 
 
 ?>
+
+</body>
+</html>
+
+
+
+
+
+
+
