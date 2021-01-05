@@ -130,12 +130,12 @@
                </div>
                <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
-                     <li class="active"><a data-scroll href="#home">Ana Sayfa</a></li>
-                     <li><a data-scroll href="#about">Hakkımızda <span class="hidden-xs">*</span></a></li>
-                     <li><a data-scroll href="#services">Servisler</a></li>
-                     <li><a data-scroll href="#projects">Projelerimiz</a></li>
-                     <li><a data-scroll href="#testimonials">Görüşler</a></li>
-                     <li><a data-scroll href="#contact">Bizimle iletişime geçin</a></li>
+                     <li class="active"><a data-scroll href="#home">ANA SAYFA</a></li>
+                     <li><a data-scroll href="#about">PROJELER <span class="hidden-xs">*</span></a></li>
+                     
+                     <li><a data-scroll href="#projects">GALERİ</a></li>
+                     <li><a data-scroll href="#testimonials">KADROMUZ</a></li>
+                     <li><a data-scroll href="#contact">BİZİMLE İLETİŞİME GEÇİN</a></li>
                   </ul>
                </div>
             </div>
@@ -161,7 +161,7 @@
                      
                      ?></p>
                      
-                     <a data-scroll href="#services" class="btn btn-light btn-radius btn-brd">Tüm servisleri gör</a>
+                     <a data-scroll href="#about" class="btn btn-light btn-radius btn-brd">Tüm projeleri gör</a>
                   </div>
                </div>
             </div>
@@ -213,55 +213,48 @@
                <!-- end col -->
             </div>
             <!-- end row -->
+            
             <div class="row text-center about-row">
             
-               <div class="col-md-4 col-sm-12 col-xs-12">
-                  <div class="row">
-                     <div class="service-widget">
-                        <div class="post-media wow fadeIn">
-                           <a href="uploads/building_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img src="uploads/building_01.jpg" alt="" class="img-responsive img-rounded">
-                        </div>
-                        <h3>Spacious and Large Garden</h3>
-                        <p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin. Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
+               <?php 
+
+               $sql = "SELECT * FROM projeler";
+               $result = mysqli_query($conn, $sql);
+               while($row = mysqli_fetch_assoc($result)){
+                  $proje_resimleri = explode('*', $row['p_resimler']);
+                  $ilk_resim_yol = "images/projeler/".$proje_resimleri[0];
+                  $pid = $row["pid"];
+                  
+                  ?>
+                  <div style="float: left;" class='col-md-4 col-sm-6 col-xs-12'>
+                     <div class='row'>
+                        
+                        <div class='service-widget'> <!-- Projeleri buraya yap-->
+                           <div class='post-media wow fadeIn'  >
+                              <a href= 'proje_goster.php?pid=<?php echo $pid; ?>'  class='hoverbutton global-radius'><i class='flaticon-unlink'></i></a>
+                             <img width="200" height="200" src="<?php echo $ilk_resim_yol; ?>" alt=''  >
+                           </div>
+                           <h3><?php echo $row['p_icerik']; ?></h3>
+                           <p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin.
+                              Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
+                        </div><!-- -->
+                        
+                        
+                        <!-- end service -->
                      </div>
-                     <div class="service-widget">
-                        <div class="post-media wow fadeIn">
-                           <a href="uploads/building_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img src="uploads/building_01.jpg" alt="" class="img-responsive img-rounded">
-                        </div>
-                        <h3>Spacious and Large Garden</h3>
-                        <p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin. Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
-                     </div>
-                     <!-- end service -->
                   </div>
-               </div>
-               <div class="col-md-4 col-sm-12 col-xs-12">
-                  <div class="row">
-                     <div class="service-widget">
-                        <div class="post-media wow fadeIn">
-                           <a href="uploads/building_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img src="uploads/building_02.jpg" alt="" class="img-responsive img-rounded">
-                        </div>
-                        <h3>With its Own Pool</h3>
-                        <p>Duis at tellus at dui tincidunt scelerisque nec sed felis. Suspendisse id dolor sed leo rutrum euismod. Nullam vestibulum fermentum erat. It nam auctor. </p>
-                     </div>
-                     <!-- end service -->
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-12 col-xs-12">
-                  <div class="row">
-                     <div class="service-widget">
-                        <div class="post-media wow fadeIn">
-                           <a href="uploads/building_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img src="uploads/building_03.jpg" alt="" class="img-responsive img-rounded">
-                        </div>
-                        <h3>In Forests- Fresh Clean Air</h3>
-                        <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
-                     </div>
-                     <!-- end service -->
-                  </div>
-               </div>
+              <?php } ?>
+               
+          
+               
+
+
+
+               
+
+
+
+               
             </div>
             <!-- end row -->
          </div>
@@ -270,53 +263,7 @@
       </div>
       <!-- end section -->
       <div id="services" class="parallax section db parallax-off no-padding-bottom"  >
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
-                  <div class="message-box">
-                     <h2>Servisler</h2>
-                     <h5>
-                     <?php 
-                     $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'slogan'";
-                     $result = mysqli_query($conn, $sql);
-                     $row = mysqli_fetch_assoc($result);
-
-                     $slogan_icerik = $row['icerik'];
-                     echo $slogan_icerik;
-                     
-                     ?>
-                     </h5>
-                  </div>
-                  <!-- end messagebox -->
-               </div>
-               <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-                  <div class="row">
-                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="service-inform">
-                           <div class="icon-service">
-                              <img src="images/icon1.png" alt="#" />
-                           </div>
-                           <div class="service-inform-text">
-                              <h3>Service One</h3>
-                              <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="service-inform">
-                           <div class="icon-service">
-                              <img src="images/icon4.png" alt="#" />
-                           </div>
-                           <div class="service-inform-text">
-                              <h3>Service Two</h3>
-                              <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+        
          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="row">
                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 serv" style="background-color:#222;">
@@ -355,154 +302,66 @@
             <div class="row">
                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
                   <div class="message-box">
-                     <h2>Our Projects</h2>
-                     <h5>Contrary to popular belief, Lorem Ipsum is not simply random text.</h5>
+                     <h2>PROJE GALERİMİZ</h2>
+                     
                   </div>
                   <!-- end messagebox -->
                </div>
+               
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="row">
                      <div class="container gal-container">
-                        <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
-                           <div class="box">
-                              <a href="#" data-toggle="modal" data-target="#1">
-                              <img src="images/pro1.png" alt="#" />
-                              </a>
-                              <div class="modal fade" id="1" tabindex="-1" role="dialog">
-                                 <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                       <div class="modal-body">
-                                          <img src="images/pro1.png" alt="#" />
-                                       </div>
-                                       <div class="col-md-12 description">
-                                          <h4>This is the first one on my Gallery</h4>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                     <?php 
+                        $resim = array();
+                        $dizin = "images/projeler" ;
+                        $tutucu = opendir($dizin);
+                        while($dosya = readdir($tutucu)){
+                        if(is_file($dizin."/".$dosya))
+                        $resim[] = $dosya;
+                        }
+                        closedir($tutucu);
+                        $toplam = count($resim);
+                        
+                        $rastgele = array();
+
+                        for($i=0; $i<$toplam+1; $i++){
+                           $rastgele[$i] = rand(0, $toplam-1);
+
+                        }
+                        
+                        
+                        for($j = 0; $j<6; $j++){
+                     ?>
+                        
                         <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
                            <div class="box">
-                              <a href="#" data-toggle="modal" data-target="#2">
-                              <img src="images/pro2.png" alt="#" />
+                              <a href="#" data-toggle="modal" data-target="#<?php echo $j+1; ?>">
+                              <img src=<?php echo $dizin."/".$resim[$rastgele[$j]];  ?> alt="#" />
                               </a>
-                              <div class="modal fade" id="2" tabindex="-1" role="dialog">
+                              <div class="modal fade" id="<?php echo $j+1; ?>" tabindex="-1" role="dialog">
                                  <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                        <div class="modal-body">
-                                          <img src="images/pro2.png" alt="#" />
+                                          <img src=<?php echo $dizin."/".$resim[$rastgele[$j]];  ?> alt="#" />
                                        </div>
                                        <div class="col-md-12 description">
-                                          <h4>This is the second one on my Gallery</h4>
+                                          <h4>Rastgele proje resimleri</h4>
                                        </div>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-                           <div class="box">
-                              <a href="#" data-toggle="modal" data-target="#3">
-                              <img src="images/pro3.png" alt="#" />
-                              </a>
-                              <div class="modal fade" id="3" tabindex="-1" role="dialog">
-                                 <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                       <div class="modal-body">
-                                          <img src="images/pro3.png" alt="#" />
-                                       </div>
-                                       <div class="col-md-12 description">
-                                          <h4>This is the third one on my Gallery</h4>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-                           <div class="box">
-                              <a href="#" data-toggle="modal" data-target="#4">
-                              <img src="images/pro4.png" alt="#" />
-                              </a>
-                              <div class="modal fade" id="4" tabindex="-1" role="dialog">
-                                 <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                       <div class="modal-body">
-                                          <img src="images/pro4.png" alt="#" />
-                                       </div>
-                                       <div class="col-md-12 description">
-                                          <h4>This is the fourth one on my Gallery</h4>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-                           <div class="box">
-                              <a href="#" data-toggle="modal" data-target="#5">
-                              <img src="images/pro3.png" alt="#" />
-                              </a>
-                              <div class="modal fade" id="5" tabindex="-1" role="dialog">
-                                 <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                       <div class="modal-body">
-                                          <img src="images/pro4.png" alt="#" />
-                                       </div>
-                                       <div class="col-md-12 description">
-                                          <h4>This is the fifth one on my Gallery</h4>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-                           <div class="box">
-                              <a href="#" data-toggle="modal" data-target="#9">
-                              <img src="images/pro2.png" alt="#" />
-                              </a>
-                              <div class="modal fade" id="9" tabindex="-1" role="dialog">
-                                 <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                       <div class="modal-body">
-                                          <img src="images/pro2.png" alt="#" />
-                                       </div>
-                                       <div class="col-md-12 description">
-                                          <h4>This is the ninth one on my Gallery</h4>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
-                           <div class="box">
-                              <a href="#" data-toggle="modal" data-target="#10">
-                              <img src="images/pro1.png" alt="#" />
-                              </a>
-                              <div class="modal fade" id="10" tabindex="-1" role="dialog">
-                                 <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                       <div class="modal-body">
-                                          <img src="images/pro1.png" alt="#" />
-                                       </div>
-                                       <div class="col-md-12 description">
-                                          <h4>This is the tenth one on my Gallery</h4>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                        
+                        <?php } ?>
+
+                        
+                        
+                        
+                        
+                        
+                        
                      </div>
                   </div>
                </div>
@@ -514,8 +373,8 @@
          <div class="container">
             <div class="section-title row text-center">
                <div class="col-md-8 col-md-offset-2">
-                  <h3>Testimonials</h3>
-                  <p class="lead">Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+                  <h3>Kadromuz</h3>
+                  
                </div>
                <!-- end col -->
             </div>
@@ -523,29 +382,38 @@
             <div class="row">
                <div class="col-md-12 col-sm-12">
                   <div class="testi-carousel owl-carousel owl-theme">
+                     
+                     
+                     
                      <div class="testimonial clearfix">
                         <div class="desc">
-                           <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                           <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                           <h3><i class="fa fa-quote-left"></i> 40 yıllık tecrübe</h3>
+                           <p class="lead">Kısa sürede teslim daireler ve uzmanlık vs vs</p>
                         </div>
                         <div class="testi-meta">
                            <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
-                           <h4>James Fernando <small>- Manager of Racer</small></h4>
+                           <h4>Mustafa Kemal Çelik <small>- Satış Danışmanı</small></h4>
                         </div>
                         <!-- end testi-meta -->
                      </div>
+
+
+
                      <!-- end testimonial -->
                      <div class="testimonial clearfix">
                         <div class="desc">
-                           <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                           <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                           <h3><i class="fa fa-quote-left"></i> İş azmi</h3>
+                           <p class="lead">Merhaba Ben Furkan Ekici</p>
                         </div>
                         <div class="testi-meta">
                            <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                           <h4>Jacques Philips <small>- Designer</small></h4>
+                           <h4>Furkan Ekici <small>- Yönetici</small></h4>
                         </div>
                         <!-- end testi-meta -->
                      </div>
+
+
+
                      <!-- end testimonial -->
                      <div class="testimonial clearfix">
                         <div class="desc">
@@ -558,6 +426,9 @@
                         </div>
                         <!-- end testi-meta -->
                      </div>
+
+
+
                      <!-- end testimonial -->
                      <div class="testimonial clearfix">
                         <div class="desc">
@@ -570,6 +441,9 @@
                         </div>
                         <!-- end testi-meta -->
                      </div>
+
+
+                     
                      <!-- end testimonial -->
                      <div class="testimonial clearfix">
                         <div class="desc">
@@ -582,6 +456,9 @@
                         </div>
                         <!-- end testi-meta -->
                      </div>
+
+
+
                      <!-- end testimonial -->
                      <div class="testimonial clearfix">
                         <div class="desc">
@@ -594,6 +471,9 @@
                         </div>
                         <!-- end testi-meta -->
                      </div>
+
+
+
                      <!-- end testimonial -->
                   </div>
                   <!-- end carousel -->
@@ -743,10 +623,10 @@
                      <h2 class="widget-title"><span>Linkler</span></h2>
                      <ul class="wprt-links clearfix col2">
                         <li><a data-scroll="" href="#home">Ana Sayfa</a></li>
-                        <li><a data-scroll="" href="#about">Hakkımızda</a></li>
-                        <li><a data-scroll="" href="#services">Servisler</a></li>
-                        <li><a data-scroll="" href="#projects">Projelerimiz</a></li>
-                        <li><a data-scroll="" href="#testimonials">Görüşler</a></li>
+                        <li><a data-scroll="" href="#about">Projeler</a></li>
+                        
+                        <li><a data-scroll="" href="#projects">Galeri</a></li>
+                        <li><a data-scroll="" href="#testimonials">Kadromuz</a></li>
                         <li><a data-scroll="" href="#contact">Bizimle iletişime geçin</a></li>
 					 </ul>
                   </div>
