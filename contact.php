@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php
-    if(isset($_POST)){
+    if(isset($_POST['kontrol'])){
         $gonderen_ip = $_SERVER["REMOTE_ADDR"];
         $sql = "SELECT iletisim_id FROM iletiler WHERE gonderen_ip='$gonderen_ip'";
         $result = mysqli_query($conn, $sql);
@@ -41,7 +41,7 @@
 
     }
 
-}else{echo "Zaten bir ileti gönderdiniz!!!";}
+}else{echo "HATA!! Zaten bir ileti gönderdiniz veya gizlilik ve güvenlik şartlarını kabul etmediniz";}
 
 
     

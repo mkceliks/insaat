@@ -130,7 +130,7 @@
                </div>
                <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
-                     <li class="active"><a data-scroll href="#anasayfa">ANA SAYFA</a></li>
+                     <li class="active"><a data-scroll href="#home">ANA SAYFA</a></li>
                      <li><a data-scroll href="#projeler">PROJELER <span class="hidden-xs">*</span></a></li>
                      
                      <li><a data-scroll href="#galeri">GALERİ</a></li>
@@ -142,7 +142,7 @@
          </nav>
       </header>
       
-      <div id="anasayfa" class="parallax first-section" data-stellar-background-ratio="0.4" style="background-image:url('uploads/building/slide-img1.png');">
+      <div id="home" class="parallax first-section" data-stellar-background-ratio="0.4" style="background-image:url('uploads/building/slide-img1.png');">
          <div class="container">
             <div class="row">
                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center">
@@ -175,7 +175,7 @@
             <div class="row">
                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                   <div class="message-box">
-                     <h2>Hakkımızda</h2>
+                     <h2>PROJELER</h2>
                      <h5>
                      <?php 
                      $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'slogan'";
@@ -498,7 +498,7 @@
                <div class="col-md-8">
                   <div class="contact_form">
                      <div id="message"></div>
-                     <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                     <form action="contact.php" method="post">
                         <fieldset class="row-fluid">
                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                               <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Adınız(Zorunlu)" required>
@@ -515,6 +515,10 @@
                            
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Daha fazla detay vermek ister misiniz?"></textarea>
+                           </div>
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <input type="checkbox" name="kontrol" id="kontrol" rows="6">
+                              <label for="kontrol">Sitenin güvenlik ve gizlilik şartlarını okudum, bu şartları kabul ediyorum.</label><br>
                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                               <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Gönder</button>
@@ -558,7 +562,7 @@
                   <div class="widget widget_links">
                      <h2 class="widget-title"><span>Linkler</span></h2>
                      <ul class="wprt-links clearfix col2">
-                        <li><a data-scroll="" href="#anasayfa">Ana Sayfa</a></li>
+                        <li><a data-scroll="" href="#home">Ana Sayfa</a></li>
                         <li><a data-scroll="" href="#projeler">Projeler</a></li>
                         
                         <li><a data-scroll="" href="#galeri">Galeri</a></li>
@@ -700,7 +704,7 @@
          </div>
       </footer>
       <!-- end footer -->
-      <a href="#anasayfa" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
       <!-- ALL JS FILES -->
       <script src="js/all.js"></script>
       <!-- ALL PLUGINS -->
