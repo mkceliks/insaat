@@ -8,6 +8,7 @@
     <title>Tüm resimler</title>
 </head>
 <body>
+<h3><center>Tüm resimler</center></h3>
 <?php
 # Resimleri cek
 include_once "../session.php";

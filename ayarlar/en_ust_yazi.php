@@ -26,6 +26,7 @@
         
     ?>
     <!-- FORM OLUŞTUR-->
+    <h3><center>En üst yazıyı değiştir</center></h3>
     <form action="en_ust_yazi.php" method="post">
         <table style="margin-left: auto; margin-right: auto; border: 1px solid black;"> 
             <tr>

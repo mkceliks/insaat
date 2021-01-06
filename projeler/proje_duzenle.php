@@ -10,6 +10,7 @@
     <title>Proje Düzenle</title>
 </head>
 <body>
+<h3><center>Proje düzenle</center></h3>
 
     <?php
         if(isset($_GET["pid"])){

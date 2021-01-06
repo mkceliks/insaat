@@ -9,7 +9,7 @@ include_once "../session.php";
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/random.css">
     
-    <title>email değiştir</title>
+    <title>Email değiştir</title>
 </head>
 <body>
     <?php 
@@ -27,6 +27,7 @@ include_once "../session.php";
         
     ?>
     <!-- FORM OLUŞTUR-->
+    <h3><center>E-posta adresini değiştir</center></h3>
     <form action="email.php" method="post">
         <table style="margin-left: auto; margin-right: auto; border: 1px solid black;"> 
             <tr>

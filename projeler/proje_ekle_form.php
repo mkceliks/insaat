@@ -16,6 +16,7 @@
         include_once "../session.php";
 
     ?>
+     <h3><center>Yeni proje ekle</center></h3>
     <div class="container">
     <form action="proje_ekle.php" method = "post" >
         

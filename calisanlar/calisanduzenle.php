@@ -30,6 +30,8 @@
     
     ?>
 
+    <h3><center>Çalışan düzenle</center></h3>
+
     <form action="" method="POST">
     <table style="margin-top: 50px;"  id="tablo">
         <tr>

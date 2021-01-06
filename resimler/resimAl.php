@@ -8,7 +8,7 @@
     <title>Resim seç</title>
 </head>
 <body>
-
+<h3><center>Havuza resim ekle</center></h3>
     <?php 
     include_once "../session.php";
 

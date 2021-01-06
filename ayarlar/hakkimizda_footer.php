@@ -24,6 +24,7 @@
         
     ?>
     <!-- FORM OLUŞTUR-->
+    <h3><center>Alt kısımdaki hakkımızda yazısını değiştir</center></h3>
     <form action="hakkimizda_footer.php" method="post">
         <table style="margin-left: auto; margin-right: auto; border: 1px solid black;"> 
             <tr>

@@ -11,7 +11,7 @@ include_once "../server.php";
 
 </head>
 <body>
-
+<h3><center>Proje resimleri</center></h3>
 <?php
 	if(isset($_GET['pid'])){
  $KIMLIK = (int) $_GET['pid'];
