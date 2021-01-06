@@ -48,7 +48,7 @@ echo "
 <table  style='padding-left:18px;float:left;'>
 
     <tr><td>
-<a href='proje_resim_ekle.php?resimisim=".$row['p_resimler'].$resim[$i]."*"."&pid=" . "$KIMLIK" . "'>
+<a href='proje_resim_ekle.php?resimisim=".$row['p_resimler'].$resim[$i]."* "."&pid=" . "$KIMLIK" . "'>
 <img onContextMenu='return false' src='".$dizin."/".$resim[$i]."'
 width='150' height='200' border='2' style='float:left;'></a>
 	<td></tr>

@@ -10,48 +10,48 @@
 </head>
 <body>
 <?php
-    
+
 
     $sql = "SELECT * FROM projeler ";
 
     $result = mysqli_query($conn, $sql);
     echo "<table id=tablo>
     <tr>
-        
+
         <th> Proje Adı </th>
         <th> Proje İçeriği</th>
         <th> Resimler </th>
-        
+
 
     </tr>
 
-     
+
 ";
 
     while ($row = mysqli_fetch_assoc($result)){
-        
+
 
         echo "
                 <tr>
-                    
+
                     <td> {$row['p_ismi']}</td>
                     <td> {$row['p_icerik']}</td>
-                    <td>{$row['p_resimler']}</td>
-                   
-                   
-                   
+                    <td> {$row['p_resimler']}</td>
+
+
+
                     <td> <a class='link' href = 'proje_resim_sec.php?pid=".$row['pid']." '> Resim seç </a> </td>
                     <td> <a class='link' href = 'proje_duzenle.php?pid=".$row['pid']." '> Düzenle </a> </td>
                     <td> <a class='linkred' href = 'proje_sil.php?pid=".$row['pid']." '> Sil </a> </td>
-                    
+
 
                 </tr>
 
-           
+
         ";
-        
-        
-        
+
+
+
         echo "<br>";
 
     }
@@ -59,9 +59,9 @@
     echo "</table>"; 
 
 
-    
 
-    
+
+
 
 ?>
 
@@ -70,6 +70,6 @@
         <td> <a class="link"  href="proje_ekle_form.php"> Veri eklemek için tıkla </a> <a class="linkred" href='../adminAnaSayfa.php'>Geri dönmek için tıkla</a> </td>
     </tr>
 </table>
-    
+
 </body>
 </html>

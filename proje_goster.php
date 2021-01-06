@@ -15,7 +15,7 @@ if(isset($_GET['pid'])){
 
     $isim = $row['p_ismi'];
     $icerik = $row['p_icerik'];
-    $resimler = explode("*", $row['p_resimler']);
+    $resimler = explode("* ", $row['p_resimler']);
 
     $toplam = count($resimler)-1;
     $dizin = "images/projeler";
@@ -37,7 +37,8 @@ if(isset($_GET['pid'])){
 }
 
 
-
+echo '<br><a   href="index.php"> Geri dönmek için tıkla </a> 
+';
 
 
 

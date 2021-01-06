@@ -19,22 +19,28 @@
 
 
 if ($_FILES["dosya"]["size"]>1) {
-  $resim_isim = $_FILES["dosya"]["name"];
+  
   $nereye = $_POST['secmece'];
 
   $yol = "../images" . "/{$nereye}"; # Yüklenecek klasör / dizin
 
-  $yuklemeYeri = __DIR__ . "/" . $yol . "/" . $_FILES["dosya"]["name"];
-  $yol_2 = $yol . "/" . $_FILES["dosya"]["name"];
- 
-  $sonuc = move_uploaded_file($_FILES["dosya"]["tmp_name"], $yuklemeYeri);
-  echo $yuklemeYeri . "<br>";
+  $dosya_sayisi = count($_FILES['dosya']['name']);
 
-  echo $sonuc ? "Dosya başarıyla yüklendi" : "Hata oluştu";
-  echo "<br>";
+  for($i=0; $i<$dosya_sayisi; $i++){
+    $resim_isim = $_FILES["dosya"]["name"][$i];
 
-  $sql = "INSERT INTO resimler (r_isim, r_yol) VALUES ('$resim_isim', '$yol_2')";
-  $result = mysqli_query($conn, $sql);
+    $yuklemeYeri = __DIR__ . "/" . $yol . "/" . $_FILES["dosya"]["name"][$i];
+    $yol_2 = $yol . "/" . $_FILES["dosya"]["name"][$i];
+  
+    $sonuc = move_uploaded_file($_FILES["dosya"]["tmp_name"][$i], $yuklemeYeri);
+    echo $yuklemeYeri . "<br>";
+
+    echo $sonuc ? "Dosya başarıyla yüklendi" : "Hata oluştu";
+    echo "<br>";
+
+    $sql = "INSERT INTO resimler (r_isim, r_yol) VALUES ('$resim_isim', '$yol_2')";
+    $result = mysqli_query($conn, $sql);
+  }
   if($result){
     echo "Ekleme başarılı." . "<br>" . "Daha fazla resim eklemek için <a href='resimAl.php'>tıkla</a>" ;
   }else{

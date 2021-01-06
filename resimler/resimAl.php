@@ -22,7 +22,7 @@
 
             <tr><td>
           <div id="yourBtn" onclick="getFile()"><h4 style="color: black;">Dosya Eklemek Için Tıklayınız...</h4></div>
-          <div style='height: 0px;width: 0px; overflow:hidden;'><input required name="dosya" id="upfile" type="file" value="upload" onchange="sub(this)" /></div>
+          <div style='height: 0px;width: 0px; overflow:hidden;'><input required name="dosya[]" id="upfile" multiple="multiple" type="file" value="upload" onchange="sub(this)" /></div>
           </td>
         <!-- <tr>
             <td>
