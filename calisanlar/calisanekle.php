@@ -5,21 +5,18 @@
         
    
         $c_isim = $_POST['c_isim'];
-        $c_e_posta = $_POST['c_e_posta'];
-        $c_facebook = $_POST['c_facebook'];
-        $c_twitter = $_POST['c_twitter'];
-        $c_instagram = $_POST['c_instagram'];
-        $c_departman = $_POST['c_departman'];
-        $c_telefon = $_POST['c_telefon'];
         
-        $c_adres = $_POST['c_adres'];
-        $c_maas = $_POST['c_maas'];
+        $c_departman = $_POST['c_departman'];
+        $c_yazi_baslik = $_POST['yazi_baslik'];
+        
+        $c_yazi = $_POST['yazi'];
+       
 
 
 
 
-        $sql = "INSERT INTO calisanlar (isim_soyad,e_posta,facebook,twitter,instagram,departman,telefon, adres, maas) 
-        VALUES ('$c_isim', '$c_e_posta', '$c_facebook', '$c_twitter', '$c_instagram', '$c_departman', '$c_telefon', '$c_adres', '$c_maas')";
+        $sql = "INSERT INTO calisanlar (isim_soyad,departman,yazi_baslik, yazi) 
+        VALUES ('$c_isim', '$c_departman', '$c_yazi_baslik', '$c_yazi')";
 
         $result = mysqli_query($conn, $sql);
         

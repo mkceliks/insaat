@@ -221,7 +221,7 @@
                $sql = "SELECT * FROM projeler";
                $result = mysqli_query($conn, $sql);
                while($row = mysqli_fetch_assoc($result)){
-                  $proje_resimleri = explode('*', $row['p_resimler']);
+                  $proje_resimleri = explode('* ', $row['p_resimler']);
                   $ilk_resim_yol = "images/projeler/".$proje_resimleri[0];
                   $pid = $row["pid"];
                   
@@ -383,94 +383,30 @@
                <div class="col-md-12 col-sm-12">
                   <div class="testi-carousel owl-carousel owl-theme">
                      
-                     
-                     
-                     <div class="testimonial clearfix">
-                        <div class="desc">
-                           <h3><i class="fa fa-quote-left"></i> 40 yıllık tecrübe</h3>
-                           <p class="lead">Kısa sürede teslim daireler ve uzmanlık vs vs</p>
-                        </div>
-                        <div class="testi-meta">
-                           <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
-                           <h4>Mustafa Kemal Çelik <small>- Satış Danışmanı</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
-                     </div>
-
-
-
-                     <!-- end testimonial -->
-                     <div class="testimonial clearfix">
-                        <div class="desc">
-                           <h3><i class="fa fa-quote-left"></i> İş azmi</h3>
-                           <p class="lead">Merhaba Ben Furkan Ekici</p>
-                        </div>
-                        <div class="testi-meta">
-                           <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                           <h4>Furkan Ekici <small>- Yönetici</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
-                     </div>
-
-
-
-                     <!-- end testimonial -->
-                     <div class="testimonial clearfix">
-                        <div class="desc">
-                           <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                           <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                        </div>
-                        <div class="testi-meta">
-                           <img src="uploads/testi_03.png" alt="" class="img-responsive alignleft">
-                           <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
-                     </div>
-
-
-
-                     <!-- end testimonial -->
-                     <div class="testimonial clearfix">
-                        <div class="desc">
-                           <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                           <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                        </div>
-                        <div class="testi-meta">
-                           <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
-                           <h4>James Fernando <small>- Manager of Racer</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
-                     </div>
-
+                     <?php 
+                        $sql1 = "SELECT * FROM calisanlar";
+                        $result1 = mysqli_query($conn, $sql1);
+                        
+                        while($eleman = mysqli_fetch_assoc($result1)){
 
                      
-                     <!-- end testimonial -->
+                     ?>
+                     
                      <div class="testimonial clearfix">
                         <div class="desc">
-                           <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                           <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                           <h3><i class="fa fa-quote-left"></i><?php echo $eleman['yazi_baslik']; ?></h3>
+                           <p class="lead"><?php echo $eleman['yazi']; ?></p>
                         </div>
                         <div class="testi-meta">
-                           <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                           <h4>Jacques Philips <small>- Designer</small></h4>
+                           <img src="images/calisanlar/<?php echo $eleman['resim']; ?>" alt="" class="img-responsive alignleft">
+                           <h4><?php echo $eleman['isim_soyad'] ?><small>- <?php echo $eleman['departman'] ?></small></h4>
                         </div>
                         <!-- end testi-meta -->
                      </div>
 
+                     <?php } ?>
 
 
-                     <!-- end testimonial -->
-                     <div class="testimonial clearfix">
-                        <div class="desc">
-                           <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                           <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                        </div>
-                        <div class="testi-meta">
-                           <img src="uploads/testi_03.png" alt="" class="img-responsive alignleft">
-                           <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                        </div>
-                        <!-- end testi-meta -->
-                     </div>
 
 
 
@@ -605,7 +541,7 @@
                   <div class="widget widget_text">
                      <h2 class="widget-title"><span>Hakkımızda</span></h2>
                      <div class="textwidget">
-                        <a class="navbar-brand" href="index-building.html"><img src="images/logo-icon.png" alt="image"><span>Constructed</span></a>
+                        <a class="navbar-brand" href="index-building.html"><img height="200"; src="images/logo-icon.png" alt="image"><span>Constructed</span></a>
                         <p><?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'hakkimizda_footer'";
                                  $result = mysqli_query($conn, $sql);

@@ -19,14 +19,11 @@
     <tr>
         
         <th> İsim Soyad </th>
-        <th> E - posta</th>
-        <th> Facebook </th>
-        <th> Twitter </th>
-        <th> Instagram </th>
+        
         <th> Departman </th>
-        <th> Telefon </th>
-        <th> Adres </th>
-        <th> Maaş </th>
+        <th> Yazı Başlığı </th>
+        <th> Yazı </th>
+        
         <th> Resim </th>
 
     </tr>
@@ -41,15 +38,12 @@
                 <tr>
                     
                     <td> {$row['isim_soyad']}</td>
-                    <td> {$row['e_posta']}</td>
-                    <td> {$row['facebook']}</td>
-                    <td> {$row['twitter']}</td>
-                    <td> {$row['instagram']}</td>
-                    <td> {$row['departman']}</td>
-                    <td> {$row['telefon']}</td>
                     
-                    <td> {$row['adres']}</td>
-                    <td> {$row['maas']}</td>
+                    <td> {$row['departman']}</td>
+                    <td> {$row['yazi_baslik']}</td>
+                    
+                    <td> {$row['yazi']}</td>
+                   
                     <td> {$row['resim']} </td>
                    
                    
