@@ -26,10 +26,11 @@
         $email= $_POST['email'];
         $telefon= $_POST['phone'];
         $icerik = $_POST['comments'];
+        $servis = $_POST['select_service'];
         
 
-        $sql = "INSERT INTO iletiler (iletisim_isim, iletisim_soyad, iletisim_email, iletisim_telefon, iletisim_icerik, gonderen_ip)
-        VALUES ('$isim', '$soyad', '$email', '$telefon', '$icerik', '$gonderen_ip')";
+        $sql = "INSERT INTO iletiler (iletisim_isim, iletisim_soyad, iletisim_email, iletisim_telefon,servis, iletisim_icerik, gonderen_ip)
+        VALUES ('$isim', '$soyad', '$email', '$telefon','$servis', '$icerik', '$gonderen_ip')";
 
         $result = mysqli_query($conn, $sql);
 
