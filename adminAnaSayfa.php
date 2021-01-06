@@ -110,6 +110,19 @@
             <td>İletiler için </td><td> <a  class="link" href="iletisim/iletisim.php">Tıklayınız.</a></td>
         </tr>
 
+
+
+        <tr>
+        <th>Servisler</th>
+        <th>Işlem</th>
+        </tr>
+
+        <tr>
+            <td>Servisler için</td><td> <a  class="link"href="servisler/servisleri_goster.php">Tıklayınız.</a></td>
+        </tr>
+
+
+
         <tr>
         <th>Resimler</th>
         <th>Işlem</th>

@@ -36,6 +36,8 @@
             <option value="" selected>Seçiniz...</option>
                  <option value="calisanlar">Çalışan</option>
                  <option value="projeler">Proje</option>
+                 <option value="servisler">Servisler</option>
+                 <option value="ikonlar">İkonlar</option>
            </select>
            </td>
 <table id="tablo1">
@@ -47,7 +49,7 @@
 <table id="tablo1">
     <tr>
         <td>
-            <a class="linkred" href='../projeler/projeleri_al.php'>Geri dönmek için tıkla</a> </td>
+            <a class="linkred" href='../adminAnaSayfa.php'>Geri dönmek için tıkla</a> </td>
     </tr>
 </table>
         </table>

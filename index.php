@@ -261,17 +261,25 @@
                </div>
                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
                   <div class="row">
+                  <?php 
+                     $sql2 = "SELECT * FROM servisler";
+                     $result2 = mysqli_query($conn, $sql2);
+                     while($servis = mysqli_fetch_assoc($result2)){
+                  ?>
+
                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="service-inform">
                            <div class="icon-service">
-                              <img src="images/icon1.png" alt="#" />
+                              <img src="images/ikonlar/<?php echo $servis['servis_ikon']; ?>" alt="#"/>
                            </div>
                            <div class="service-inform-text">
-                              <h3>Service One</h3>
-                              <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                              <h3><?php echo $servis['servis_ismi']; ?></h3>
+                              <p>Detaylı bilgi için <a href="ek_servisler.php?servis_id=<?php echo $servis['servis_id']; ?>">tıklayınız...</a></p>
                            </div>
                         </div>
                      </div>
+                  <?php } ?>
+                     <!-- 
                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="service-inform">
                            <div class="icon-service">
@@ -283,6 +291,8 @@
                            </div>
                         </div>
                      </div>
+                     -->
+
                   </div>
                </div>
             </div>
