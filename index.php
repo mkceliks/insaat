@@ -130,19 +130,19 @@
                </div>
                <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
-                     <li class="active"><a data-scroll href="#home">ANA SAYFA</a></li>
-                     <li><a data-scroll href="#about">PROJELER <span class="hidden-xs">*</span></a></li>
+                     <li class="active"><a data-scroll href="#anasayfa">ANA SAYFA</a></li>
+                     <li><a data-scroll href="#projeler">PROJELER <span class="hidden-xs">*</span></a></li>
                      
-                     <li><a data-scroll href="#projects">GALERİ</a></li>
-                     <li><a data-scroll href="#testimonials">KADROMUZ</a></li>
-                     <li><a data-scroll href="#contact">BİZİMLE İLETİŞİME GEÇİN</a></li>
+                     <li><a data-scroll href="#galeri">GALERİ</a></li>
+                     <li><a data-scroll href="#kadro">KADROMUZ</a></li>
+                     <li><a data-scroll href="#iletisim">BİZİMLE İLETİŞİME GEÇİN</a></li>
                   </ul>
                </div>
             </div>
          </nav>
       </header>
       
-      <div id="home" class="parallax first-section" data-stellar-background-ratio="0.4" style="background-image:url('uploads/building/slide-img1.png');">
+      <div id="anasayfa" class="parallax first-section" data-stellar-background-ratio="0.4" style="background-image:url('uploads/building/slide-img1.png');">
          <div class="container">
             <div class="row">
                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center">
@@ -161,7 +161,7 @@
                      
                      ?></p>
                      
-                     <a data-scroll href="#about" class="btn btn-light btn-radius btn-brd">Tüm projeleri gör</a>
+                     <a data-scroll href="#projeler" class="btn btn-light btn-radius btn-brd">Tüm projeleri gör</a>
                   </div>
                </div>
             </div>
@@ -170,7 +170,7 @@
          <!-- end container -->
       </div>
       <!-- end section -->
-      <div id="about" class="section wb">
+      <div id="projeler" class="section wb">
          <div class="container">
             <div class="row">
                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -297,7 +297,7 @@
          </div>
       </div>
       <!-- end section -->
-      <div id="projects" class="section">
+      <div id="galeri" class="section">
          <div class="container">
             <div class="row">
                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
@@ -369,7 +369,7 @@
          </div>
       </div>
       <!-- end section -->
-      <div id="testimonials" class="section db">
+      <div id="kadro" class="section db">
          <div class="container">
             <div class="section-title row text-center">
                <div class="col-md-8 col-md-offset-2">
@@ -422,7 +422,7 @@
       </div>
       <!-- end section -->
       
-      <div id="contact" class="section wb">
+      <div id="iletisim" class="section wb">
          <div class="container">
             <div class="section-title row text-center">
                <div class="col-md-8 col-md-offset-2">
@@ -558,12 +558,12 @@
                   <div class="widget widget_links">
                      <h2 class="widget-title"><span>Linkler</span></h2>
                      <ul class="wprt-links clearfix col2">
-                        <li><a data-scroll="" href="#home">Ana Sayfa</a></li>
-                        <li><a data-scroll="" href="#about">Projeler</a></li>
+                        <li><a data-scroll="" href="#anasayfa">Ana Sayfa</a></li>
+                        <li><a data-scroll="" href="#projeler">Projeler</a></li>
                         
-                        <li><a data-scroll="" href="#projects">Galeri</a></li>
-                        <li><a data-scroll="" href="#testimonials">Kadromuz</a></li>
-                        <li><a data-scroll="" href="#contact">Bizimle iletişime geçin</a></li>
+                        <li><a data-scroll="" href="#galeri">Galeri</a></li>
+                        <li><a data-scroll="" href="#kadro">Kadromuz</a></li>
+                        <li><a data-scroll="" href="#iletisim">Bizimle iletişime geçin</a></li>
 					 </ul>
                   </div>
                </div>
@@ -683,15 +683,14 @@
                <div id="bottom-bar-inner" class="wprt-container">
                   <div class="bottom-bar-inner-wrap">
                      <div class="bottom-bar-content">
-                        <div id="copyright">All Rights Reserved. Company Name © 2018</div>
+                        <div id="copyright">Bu site Koyukan İnşaat için özenle hazırlanmıştır.</div>
                         <!-- /#copyright -->
                      </div>
                      <!-- /.bottom-bar-content -->
                      <div class="bottom-bar-menu pull-right">
                         <ul class="bottom-nav">
-                           <li><a href="#/">HISTORY</a></li>
-                           <li><a href="#/">FAQ</a></li>
-                           <li><a href="#/">EVENTS</a></li>
+                           <li><a href="#/">Gizlilik ve Güvenlik</a></li>
+                           
                         </ul>
                      </div>
                      <!-- /.bottom-bar-menu -->
@@ -701,7 +700,7 @@
          </div>
       </footer>
       <!-- end footer -->
-      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+      <a href="#anasayfa" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
       <!-- ALL JS FILES -->
       <script src="js/all.js"></script>
       <!-- ALL PLUGINS -->
