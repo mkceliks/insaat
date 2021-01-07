@@ -567,8 +567,14 @@
                               <select required name="select_service" id="select_service" class="selectpicker form-control" data-style="btn-white">
                                  <option value="Konusuz">Konu seçin</option>
                                  <option value="İnşaat">İnşaat</option>
-                                 <option value="Hayvancılık">Hayvancılık</option>
-                                 <option value="Bahçe">Bahçe</option>
+                                 <?php 
+                                    $sql3 = "SELECT * FROM servisler";
+                                    $result3 = mysqli_query($conn, $sql3);
+                                    while($servis_iletisim = mysqli_fetch_assoc($result3)){
+                                 ?>
+                                 
+                                 <option value="<?php echo $servis_iletisim['servis_ismi'] ?>"><?php echo $servis_iletisim['servis_ismi'] ?></option>
+                                 <?php } ?>
                               </select>
                            </div>
                            
