@@ -25,6 +25,7 @@
         
     ?>
     <!-- FORM OLUŞTUR-->
+    <h3><center>Sloganı değiştir</center></h3>
     <form action="slogan.php" method="post">
         <table style="margin-left: auto; margin-right: auto; border: 1px solid black;"> 
             <tr>

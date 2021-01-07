@@ -25,7 +25,7 @@ if(isset($_GET['pid'])){
 
     for($i=0; $i < $toplam; $i++){
         echo "
-        
+        <h3><center>Seçilen proje için resim silme</center></h3>
         <a href='p_resim_sil_arkaplan.php?pid=".$pid."&resim=".$resimler[$i]."' >
         <img onContextMenu='return false' src='".$dizin."/".$resimler[$i]."'
         width='150' height='200' border='2'></a>";

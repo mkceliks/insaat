@@ -21,6 +21,7 @@
         <th> Soyisim</th>
         <th> Mail </th>
         <th> Telefon </th>
+        <th> Servis </th>
         <th> İçerik </th>
         
         
@@ -40,6 +41,7 @@
                     <td> {$row['iletisim_soyad']}</td>
                     <td> {$row['iletisim_email']}</td>
                     <td> {$row['iletisim_telefon']}</td>
+                    <td> {$row['servis']} </td>
                     <td> {$row['iletisim_icerik']}</td>
                    
                    

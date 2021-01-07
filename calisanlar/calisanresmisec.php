@@ -10,6 +10,7 @@ include_once "../session.php";
 	<link rel="stylesheet" href="../css/random.css">
 </head>
 <body>
+<h3><center>Çalışan Resimleri</center></h3>
 	<?php
 if(isset($_GET['ID'])){
  $KIMLIK = (int) $_GET['ID'];

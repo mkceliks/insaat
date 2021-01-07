@@ -132,7 +132,7 @@
                   <ul class="nav navbar-nav navbar-right">
                      <li class="active"><a data-scroll href="#home">ANA SAYFA</a></li>
                      <li><a data-scroll href="#projeler">PROJELER <span class="hidden-xs">*</span></a></li>
-                     
+                     <li><a data-scroll="" href="#services">DİĞER SERVİSLER</a></li>
                      <li><a data-scroll href="#galeri">GALERİ</a></li>
                      <li><a data-scroll href="#kadro">KADROMUZ</a></li>
                      <li><a data-scroll href="#iletisim">BİZİMLE İLETİŞİME GEÇİN</a></li>
@@ -247,7 +247,56 @@
                
           
                
+              <div id="services" class="parallax section db parallax-off no-padding-bottom"  >
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                  <div class="message-box">
+                     <h2>DİĞER SERVİSLER</h2>
+                     <h5>
+                        YANDA GÖRÜLEN İŞ KOLLARINDA DA HİZMET VERMEKTEYİZ. <br>BİLGİ ALMAK İÇİN BAĞLANTILARA TIKLAYABİLİRSİNİZ...
+                     </h5>
+                  </div>
+                  <!-- end messagebox -->
+               </div>
+               <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+                  <div class="row">
+                  <?php 
+                     $sql2 = "SELECT * FROM servisler";
+                     $result2 = mysqli_query($conn, $sql2);
+                     while($servis = mysqli_fetch_assoc($result2)){
+                  ?>
 
+                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="service-inform">
+                           <div class="icon-service">
+                              <img src="images/ikonlar/<?php echo $servis['servis_ikon']; ?>" alt="#"/>
+                           </div>
+                           <div class="service-inform-text">
+                              <h3><?php echo $servis['servis_ismi']; ?></h3>
+                              <p>Detaylı bilgi için <a href="ek_servisler.php?servis_id=<?php echo $servis['servis_id']; ?>">tıklayınız...</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  <?php } ?>
+                     <!-- 
+                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="service-inform">
+                           <div class="icon-service">
+                              <img src="images/icon4.png" alt="#" />
+                           </div>
+                           <div class="service-inform-text">
+                              <h3>Service Two</h3>
+                              <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                           </div>
+                        </div>
+                     </div>
+                     -->
+
+                  </div>
+               </div>
+            </div>
+         </div>       
 
 
                
@@ -512,6 +561,22 @@
                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                               <input type="text" name="phone" id="phone" class="form-control" placeholder="Telefonunuz(Zorunlu)" required>
                            </div>
+
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <label class="sr-only">Konu Seçin</label>
+                              <select required name="select_service" id="select_service" class="selectpicker form-control" data-style="btn-white">
+                                 <option value="Konusuz">Konu seçin</option>
+                                 <option value="İnşaat">İnşaat</option>
+                                 <?php 
+                                    $sql3 = "SELECT * FROM servisler";
+                                    $result3 = mysqli_query($conn, $sql3);
+                                    while($servis_iletisim = mysqli_fetch_assoc($result3)){
+                                 ?>
+                                 
+                                 <option value="<?php echo $servis_iletisim['servis_ismi'] ?>"><?php echo $servis_iletisim['servis_ismi'] ?></option>
+                                 <?php } ?>
+                              </select>
+                           </div>
                            
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Daha fazla detay vermek ister misiniz?"></textarea>
@@ -564,7 +629,7 @@
                      <ul class="wprt-links clearfix col2">
                         <li><a data-scroll="" href="#home">Ana Sayfa</a></li>
                         <li><a data-scroll="" href="#projeler">Projeler</a></li>
-                        
+                        <li><a data-scroll="" href="#services">DİĞER SERVİSLER</a></li>
                         <li><a data-scroll="" href="#galeri">Galeri</a></li>
                         <li><a data-scroll="" href="#kadro">Kadromuz</a></li>
                         <li><a data-scroll="" href="#iletisim">Bizimle iletişime geçin</a></li>

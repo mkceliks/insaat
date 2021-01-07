@@ -16,6 +16,7 @@
         include_once "../session.php";
 
     ?>
+     <h3><center>Yeni çalışan ekle</center></h3>
     <div class="container">
     <form action="calisanekle.php" method = "post" enctype="multipart/form-data">
         

@@ -7,21 +7,21 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/random.css">
     
-    <title>Proje Düzenle</title>
+    <title>Servis Düzenle</title>
 </head>
 <body>
-<h3><center>Proje düzenle</center></h3>
+<h3><center>Servis düzenle</center></h3>
 
     <?php
-        if(isset($_GET["pid"])){
-            $pid = $_GET["pid"];
+        if(isset($_GET["servis_id"])){
+            $servis_id = $_GET["servis_id"];
 
-            $sql = "SELECT * FROM projeler WHERE pid= '$pid' ";
+            $sql = "SELECT * FROM servisler WHERE servis_id = '$servis_id' ";
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
 
-            $p_ismi = $row['p_ismi'];
-            $p_icerik = $row['p_icerik'];
+            $servis_ismi = $row['servis_ismi'];
+            $servis_icerik = $row['servis_icerik'];
             
             
 
@@ -32,18 +32,18 @@
     <form action="" method="POST">
     <table style="margin-top: 50px;" id="tablo">
         <tr>
-        <td>Proje İsmi</td>
-        <td> <textarea  name="p_ismi" id="p_ismi"  cols="45" rows="1" style="resize:none;"><?php echo $p_ismi; ?></textarea></td>
+        <td>Servis İsmi</td>
+        <td> <textarea  name="servis_ismi" id="servis_ismi"  cols="45" rows="1" style="resize:none;"><?php echo $servis_ismi; ?></textarea></td>
         </tr>
 
         <tr>
-        <td>Proje İçeriği</td>
-        <td> <textarea type="text" name="p_icerik" id="p_icerik" cols="45" rows="10" ><?php echo $p_icerik; ?></textarea></td>
+        <td>Servis İçeriği</td>
+        <td> <textarea type="text" name="servis_icerik" id="servis_icerik" cols="45" rows="10" ><?php echo $servis_icerik; ?></textarea></td>
         </tr>
 
         <tr>
         <td>Resim Silme</td>
-        <td> <a href="proje_resmi_sil.php?pid=<?php echo $pid;?>"><input type="button" value="Düzenle"> </a></td>
+        <td> <a href="servis_resmi_sil.php?servis_id=<?php echo $servis_id;?>"><input type="button" value="Düzenle"> </a></td>
         </tr>
     </table>
     <div style="text-align: middle;">
@@ -59,23 +59,23 @@
     <?php 
 
     if(isset($_POST["submit"])){
-        $yeni_p_ismi= $_POST["p_ismi"];
-        $yeni_p_icerik = $_POST["p_icerik"];
+        $yeni_s_ismi= $_POST["servis_ismi"];
+        $yeni_s_icerik = $_POST["servis_icerik"];
         
 
-        $sorgu = $conn->prepare("UPDATE projeler SET p_ismi = ?, p_icerik=? WHERE pid = '$pid'");
+        $sorgu = $conn->prepare("UPDATE servisler SET servis_ismi = ?, servis_icerik=? WHERE servis_id = '$servis_id'");
         
-        $sorgu->bind_param("ss",$yeni_p_ismi, $yeni_p_icerik );
+        $sorgu->bind_param("ss",$yeni_s_ismi, $yeni_s_icerik );
         $sorgu->execute();
 
          if ($sorgu->affected_rows > 0) {
                 echo "<br><p style='text-align:center;'>İşlem başarılı!!!<br></p>";
-                echo "<div style='text-align:center;'> <a class='link' href='projeleri_al.php'>Çıkmak için tıklayın</a></div>";
+                echo "<div style='text-align:center;'> <a class='link' href='servisleri_goster.php'>Çıkmak için tıklayın</a></div>";
                 
             }else {
 
                 echo "<br><p style='text-align:center;'>HATA!!<br></p>";
-                echo "<div style='text-align:center;'> <a class='linkred' href='projeleri_al.php'>Çıkmak için tıklayın</a></div>"; 
+                echo "<div style='text-align:center;'> <a class='linkred' href='servisleri_goster.php'>Çıkmak için tıklayın</a></div>"; 
             }  
 
         

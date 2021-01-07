@@ -8,7 +8,7 @@
     <title>Resim seç</title>
 </head>
 <body>
-
+<h3><center>Havuza resim ekle</center></h3>
     <?php 
     include_once "../session.php";
 
@@ -36,6 +36,8 @@
             <option value="" selected>Seçiniz...</option>
                  <option value="calisanlar">Çalışan</option>
                  <option value="projeler">Proje</option>
+                 <option value="servisler">Servisler</option>
+                 <option value="ikonlar">İkonlar</option>
            </select>
            </td>
 <table id="tablo1">
