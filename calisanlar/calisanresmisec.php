@@ -58,7 +58,8 @@ width='150' height='200' border='2' style='float:left;'></a>
 
 }
 echo "
-<a style='margin-left:5px;margin-top:3px;' class='link' href='../resimler/resimAl.php'><img style='margin-top:10px;' width='150' height='167' src='../images/arti_simgesi.png'></a>";
+<a style='margin-left:5px;margin-top:3px;' class='link' href='../resimler/resimAl.php'><img style='margin-top:10px;' width='150' height='167' src='../images/arti_simgesi.png'></a>
+<a style='text-align:center;margin-left:5px;margin-top:3px;' class='linkred' href='veri_al.php'><img style='margin-top:10px;' width='150' height='167' src='../images/back.png'></a>";
 
 
 

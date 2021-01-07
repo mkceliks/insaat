@@ -40,7 +40,8 @@ while($row = mysqli_fetch_assoc($result)){
 
 
 echo "
-<a style='margin-left:5px;margin-top:3px;' class='link' href='../resimler/resimAl.php'><img style='margin-top:10px;' width='150' height='167' src='../images/arti_simgesi.png'></a>";
+<a style='text-align:center;margin-left:5px;margin-top:3px;' class='link' href='../resimler/resimAl.php'><img style='margin-top:10px;' width='150' height='167' src='../images/arti_simgesi.png'></a>
+<a style='text-aling:center;margin-left:5px;margin-top:3px;' class='linkred' href='../adminAnaSayfa.php'><img style='margin-top:10px;' width='150' height='167' src='../images/back.png'></a>";
 
 
 
