@@ -758,7 +758,6 @@
                      <div class="bottom-bar-menu pull-right">
                         <ul class="bottom-nav">
                            <li><a href="#/">Gizlilik ve Güvenlik</a></li>
-                           
                         </ul>
                      </div>
                      <!-- /.bottom-bar-menu -->
