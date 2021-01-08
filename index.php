@@ -234,9 +234,8 @@
                               <a href= 'proje_goster.php?pid=<?php echo $pid; ?>'  class='hoverbutton global-radius'><i class='flaticon-unlink'></i></a>
                              <img width="200" height="200" src="<?php echo $ilk_resim_yol; ?>" alt=''  >
                            </div>
-                           <h3><?php echo $row['p_icerik']; ?></h3>
-                           <p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin.
-                              Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
+                           <h3><?php echo $row['p_ismi']; ?></h3>
+                         
                         </div><!-- -->
                         
                         
