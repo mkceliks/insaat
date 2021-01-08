@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="../css/random.css">
 
-    <title>Calisan Ekle</title>
+    <title>Yeni çalışan ekle</title>
 </head>
 <body>
     <?php 

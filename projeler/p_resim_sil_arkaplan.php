@@ -34,7 +34,7 @@ if(isset($_GET)){
     $sorgu->bind_param("s",$resimler_son);
     $sorgu->execute();
     if ($sorgu->affected_rows > 0) {
-        echo "<br><p style='text-align:center;'>İşlem başarılı!!!<br></p>";
+        echo "<br><p style='text-align:center;'>İşlem başarılı!!! <img style='width:25px;' src='../images/tick.png'  <br></p>";
         header("Refresh: 2; url=proje_resmi_sil.php?pid=$pid");
         
     }else {
@@ -44,7 +44,7 @@ if(isset($_GET)){
     }  
     
     
-
+  
     
 
 

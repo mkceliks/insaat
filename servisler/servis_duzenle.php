@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/random.css">
     
-    <title>Servis Düzenle</title>
+    <title>Servis düzenle</title>
 </head>
 <body>
 <h3><center>Servis düzenle</center></h3>

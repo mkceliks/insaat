@@ -6,7 +6,7 @@ include_once "../server.php";
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Servis resmi seç</title>
 	<link rel="stylesheet" href="../css/random.css">
 
 </head>

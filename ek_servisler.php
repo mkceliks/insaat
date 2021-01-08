@@ -14,7 +14,7 @@ include_once "server.php";
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- Site Metas -->
-   <title>Koyukan İnşaat</title>
+   <title>Koyukan İnşaat Ek Servisler</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -222,7 +222,7 @@ include_once "server.php";
          
 <?php    echo "
     <h3><center>  $servis_ismi  </center></h3>
-        <p> $servis_icerik </p>
+        <p style='color: #4f2f2f;'> $servis_icerik </p>
     ";
     for($i=0; $i < $toplam; $i++){
                         

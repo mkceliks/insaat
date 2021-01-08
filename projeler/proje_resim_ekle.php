@@ -6,7 +6,7 @@ include_once "../session.php";
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Proje resmi ekle</title>
 	<link rel="stylesheet" href="../css/random.css">
 </head>
 <body>

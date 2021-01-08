@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Language" content = "tr">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/random.css">
-    <title>Servisler Listesi</title>
+    <title>Servisler listesi</title>
 </head>
 <body>
 <?php

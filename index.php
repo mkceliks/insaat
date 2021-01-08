@@ -176,7 +176,7 @@
                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                   <div class="message-box">
                      <h2>PROJELER</h2>
-                     <h5>
+                     <h5 style="color: #4f2f2f;">
                      <?php 
                      $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'slogan'";
                      $result = mysqli_query($conn, $sql);
@@ -193,7 +193,7 @@
                <!-- end col -->
                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                   <div class="message-box">
-                     <p class="lead">
+                     <p class="lead" style="color: #4f2f2f;">
                      
                      <?php 
                      $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'hakkimizda'";
@@ -252,7 +252,7 @@
                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
                   <div class="message-box">
                      <h2>DİĞER SERVİSLER</h2>
-                     <h5>
+                     <h5 style="color: #4f2f2f;">
                         YANDA GÖRÜLEN İŞ KOLLARINDA DA HİZMET VERMEKTEYİZ. <br>BİLGİ ALMAK İÇİN BAĞLANTILARA TIKLAYABİLİRSİNİZ...
                      </h5>
                   </div>
@@ -273,7 +273,7 @@
                            </div>
                            <div class="service-inform-text">
                               <h3><?php echo $servis['servis_ismi']; ?></h3>
-                              <p>Detaylı bilgi için <a href="ek_servisler.php?servis_id=<?php echo $servis['servis_id']; ?>">tıklayınız...</a></p>
+                              <p style="color: #4f2f2f;">Detaylı bilgi için <a href="ek_servisler.php?servis_id=<?php echo $servis['servis_id']; ?>">tıklayınız...</a></p>
                            </div>
                         </div>
                      </div>
@@ -489,7 +489,7 @@
                               <div class="icon"><i class="fa fa-home"></i></div>
                            </div>
                            <div class="info-content">
-                              <h6 class="uppercase"> Address:</h6>
+                              <h6 class="uppercase"> Adres:</h6>
                               <p> 
                               <?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'adres'";
@@ -528,7 +528,7 @@
                               <div class="icon"><i class="fa fa-envelope-o"></i></div>
                            </div>
                            <div class="info-content">
-                              <h6 class="uppercase"> Email Address:</h6>
+                              <h6 class="uppercase"> Email :</h6>
                               <p><?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'e-mail'";
                                  $result = mysqli_query($conn, $sql);
@@ -582,7 +582,7 @@
                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <input type="checkbox" name="kontrol" id="kontrol" rows="6">
-                              <label for="kontrol">Sitenin güvenlik ve gizlilik şartlarını okudum, bu şartları kabul ediyorum.</label><br>
+                              <label style="color: #4f2f2f;" for="kontrol">Sitenin güvenlik ve gizlilik şartlarını okudum, bu şartları kabul ediyorum.</label><br>
                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                               <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Gönder</button>

@@ -1,8 +1,21 @@
+<?php include_once "../server.php";
+include_once "../session.php";
+ ?>
+
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta http-equiv="Content-Type" content = "text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content = "tr">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/random.css">
+    <title>Proje resmi sil</title>
+</head>
+<body>
+
 <?php
 # Resimleri cek
 
-include_once "../server.php";
-include_once "../session.php";
 
 
 
@@ -25,10 +38,14 @@ if(isset($_GET['pid'])){
     echo "<h3><center>Seçilen proje için resim silme</center></h3>";
     for($i=0; $i < $toplam; $i++){
         echo "
-        
+        <table  style='padding-left:18px;float:left;'>
+        <tr><td>
         <a href='p_resim_sil_arkaplan.php?pid=".$pid."&resim=".$resimler[$i]."' >
         <img onContextMenu='return false' src='".$dizin."/".$resimler[$i]."'
-        width='150' height='200' border='2'></a>";
+        width='150' height='200' border='2'></a>
+        </td></tr>
+        <th><p  style='text-align:center;width:170px;height:100px;margin-bottom:5px;'>$resimler[$i]</p></th>
+    </table>";
         }
 
         
@@ -37,8 +54,15 @@ if(isset($_GET['pid'])){
 }
 
 
-
+echo "<a style='text-aling:center;margin-left:5px;margin-top:3px;' class='linkred' href='projeleri_al.php'><img style='margin-top:10px;'  width='150' height='167' src='../images/back.png'></a>";
 
 
 
 ?>
+    
+</body>
+</html>
+
+
+
+

@@ -6,11 +6,11 @@ include_once "../session.php";
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Servis arkaplan resmi</title>
 	<link rel="stylesheet" href="../css/random.css">
 </head>
 <body>
-<h3><center>Servis Arkaplan Resmi</center></h3>
+<h3><center>Servis arkaplan resmi</center></h3>
 	<?php
 if(isset($_GET['servis_id'])){
  $KIMLIK =  $_GET['servis_id'];

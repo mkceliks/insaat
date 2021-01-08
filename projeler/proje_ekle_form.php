@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="../css/random.css">
 
-    <title>Proje Ekle</title>
+    <title>Proje ekleme formu</title>
 </head>
 <body>
     <?php 

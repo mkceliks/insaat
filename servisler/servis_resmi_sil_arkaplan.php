@@ -10,7 +10,7 @@ include_once "../session.php";
 if(isset($_GET)){
     $servis_id = $_GET['servis_id'];
 
-    $resim = $_GET['resim'];
+    $resim = $_GET['resimisim'];
 
     $sql = "SELECT * FROM servisler WHERE servis_id='$servis_id'";
     $result = mysqli_query($conn, $sql);
@@ -34,13 +34,13 @@ if(isset($_GET)){
     $sorgu->bind_param("s",$resimler_son);
     $sorgu->execute();
     if ($sorgu->affected_rows > 0) {
-        echo "<br><p style='text-align:center;'>İşlem başarılı!!!<br></p>";
-        header("Refresh: 2; url=servis_resmi_sil.php?pid=$pid");
+        echo "<br><p style='text-align:center;'>İşlem başarılı<img style='width:25px;' src='../images/tick.png'><br></p>";
+        header("Refresh: 2; url=servis_resmi_sil.php?servis_id=$servis_id");
         
     }else {
 
         echo "<br><p style='text-align:center;'>HATA!!<br></p>";
-        header("Refresh: 2; url=servis_resmi_sil.php?pid=$pid");
+        header("Refresh: 2; url=servis_resmi_sil.php?servis_idid=$servis_idid");
     }  
     
     

@@ -6,7 +6,7 @@ include_once "../server.php";
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Proje resimleri</title>
 	<link rel="stylesheet" href="../css/random.css">
 
 </head>
@@ -51,7 +51,7 @@ echo "
 <a href='proje_resim_ekle.php?resimisim=".$row['p_resimler'].$resim[$i]."* "."&pid=" . "$KIMLIK" . "'>
 <img onContextMenu='return false' src='".$dizin."/".$resim[$i]."'
 width='150' height='200' border='2' style='float:left;'></a>
-	<td></tr>
+</td></tr>
 
 
 <th><p  style='text-align:center;width:170px;height:100px;margin-bottom:5px;'>$resim[$i]</p></th>

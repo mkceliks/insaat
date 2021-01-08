@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="../css/random.css">
 
-    <title>Servis Ekle</title>
+    <title>Servis ekle</title>
 </head>
 <body>
     <?php 

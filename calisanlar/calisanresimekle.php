@@ -5,7 +5,7 @@ include_once "../session.php";
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Resim Ekleme Sonucu</title>
+    <title>Çalışan resim ekle</title>
     <link rel="stylesheet" href="../css/random.css">
 </head>
 <body>
