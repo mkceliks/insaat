@@ -43,6 +43,7 @@
 
 
                     <td> <a class='link' href = 'servis_resim_sec.php?servis_id=".$row['servis_id']." '> Resim seç </a> </td>
+                    <td> <a class='link' href = 'servis_arkaplan_sec.php?servis_id=".$row['servis_id']." '> Arkaplan seç </a> </td>
                     <td> <a class='link' href = 'servis_ikon_sec.php?servis_id=".$row['servis_id']." '> İkon seç </a> </td>
                     <td> <a class='link' href = 'servis_duzenle.php?servis_id=".$row['servis_id']." '> Düzenle </a> </td>
                     <td> <a class='linkred' href = 'servis_sil.php?servis_id=".$row['servis_id']." '> Sil </a> </td>
