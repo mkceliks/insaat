@@ -244,7 +244,7 @@
                   </div>
               <?php } ?>
                
-          
+            </div>      
                
               <div id="services" class="parallax section db parallax-off no-padding-bottom"  >
          <div class="container">
