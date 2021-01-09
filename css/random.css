@@ -182,6 +182,32 @@ div.container {
 }
 
 
+.modal {
+    background-color: white;
+    max-width: 700px;
+    margin: 5em auto;
+    box-shadow: 0 0 62px rgba(0, 0, 0, .3);
+    position: relative;
+}
+
+@media(max-width:991px) {
+    .modal {
+        max-width: 450px
+    }
+}
+
+.modal .mfp-close {
+    position: absolute;
+    font: 300 30px/1 "Poppins", sans-serif;
+    text-transform: uppercase;
+    opacity: .4;
+    transition: all 300ms linear 0s
+}
+
+.modal .mfp-close:hover {
+    opacity: 1
+}
+
 
 
 

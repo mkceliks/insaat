@@ -146,13 +146,13 @@ include_once "server.php";
          </nav>
       </header>
       
-      <div id="home" class="parallax" data-stellar-background-ratio="0.4" style="background-image:url('images/projeler/foto.jpg');">
+      <div id="home" class="parallax" data-stellar-background-ratio="0.4" style="background-image:url('images/foto.jpg');">
          <div class="container">
             <div class="row">
                <div style="margin-top: 7%;" class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center">
                   <div class="big-tagline">
                      <img class="border-line-img" src="uploads/building/sep-line-white.png" alt="" />
-                     <h2 style="margin-bottom: 7%;"><span style="text-align: center;" class="yellow"><?php if(isset($_GET['pid'])){$pid = $_GET['pid'];
+                     <h2 style="margin-bottom: 7%;"><span style="text-align: center; font-size:75px;color: #fdc42e" ><?php if(isset($_GET['pid'])){$pid = $_GET['pid'];
                      $sql = "SELECT * FROM projeler WHERE pid='$pid'";
                      $result = mysqli_query($conn, $sql);
                      $row = mysqli_fetch_assoc($result);
@@ -198,9 +198,9 @@ include_once "server.php";
       <div id="galeri" class="section">
          <div class="container">
             <div class="row">
-               <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+               <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
                   <div class="message-box">
-                     <h2>PROJE GALERİMİZ</h2>
+                     <h3 style="text-align:center;font-weight:bold;font-size: 54px;">PROJE GALERİMİZ</h3>
                      
                   </div>
                   <!-- end messagebox -->
@@ -211,8 +211,9 @@ include_once "server.php";
                      <div class="container gal-container">
          
 <?php    echo "
-    <h3><center>  $isim  </center></h3>
-        <p style='color: #4f2f2f;'> $icerik </p>
+    <h1 style='text-align:center;font-weight:bold;font-size: 25px;'> $isim  </h1>
+    <br>
+        <p style='text-align:center;color:#4f2f2f'> $icerik </p><br>
     ";
     for($i=0; $i < $toplam; $i++){
                         
@@ -267,7 +268,7 @@ include_once "server.php";
                   <div class="widget widget_text">
                      <h2 class="widget-title"><span>Hakkımızda</span></h2>
                      <div class="textwidget">
-                        <a class="navbar-brand" href="index-building.html"><img height="200"; src="images/logo-icon.png" alt="image"><span>Constructed</span></a>
+                        <a class="navbar-brand" href="index-building.html"><img height="200"; src="images/logo-icon.png" alt="image"><span>KOYUKAN INŞAAT</span></a>
                         <p><?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'hakkimizda_footer'";
                                  $result = mysqli_query($conn, $sql);
@@ -285,11 +286,11 @@ include_once "server.php";
                      <h2 class="widget-title"><span>Linkler</span></h2>
                      <ul class="wprt-links clearfix col2">
                         <li><a data-scroll="" href="#home">Ana Sayfa</a></li>
-                        <li><a data-scroll="" href="#projeler">Projeler</a></li>
-                        <li><a data-scroll="" href="#services">DİĞER SERVİSLER</a></li>
+                        <li><a data-scroll="" href="http://localhost:8888/insaat/#projeler">Projeler</a></li>
+                        <li><a data-scroll="" href="http://localhost:8888/insaat/#services">Diğer Servisler</a></li>
                         <li><a data-scroll="" href="#galeri">Galeri</a></li>
-                        <li><a data-scroll="" href="#kadro">Kadromuz</a></li>
-                        <li><a data-scroll="" href="#iletisim">Bizimle iletişime geçin</a></li>
+                        <li><a data-scroll="" href="http://localhost:8888/insaat/#kadro">Kadromuz</a></li>
+                        <li><a data-scroll="" href="http://localhost:8888/insaat/#iletisim">Bizimle iletişime geçin</a></li>
                      </ul>
                   </div>
                </div>
@@ -415,7 +416,7 @@ include_once "server.php";
                      <!-- /.bottom-bar-content -->
                      <div class="bottom-bar-menu pull-right">
                         <ul class="bottom-nav">
-                           <li><a href="#/">Gizlilik ve Güvenlik</a></li>
+                           <li><a href="gizlilik.php">Gizlilik ve Güvenlik</a></li>
                            
                         </ul>
                      </div>

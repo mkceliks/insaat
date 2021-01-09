@@ -161,7 +161,7 @@ include_once "server.php";
                <div style="margin-top: 7%;" class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center">
                   <div class="big-tagline">
                      <img class="border-line-img" src="uploads/building/sep-line-white.png" alt="" />
-                     <h2 style="margin-bottom: 7%;"><span style="text-align: center;" class="yellow"><?php if(isset($_GET['servis_id'])){
+                     <h2 style="margin-bottom: 7%;"><span style="text-align: center; font-size:75px;color: #fdc42e" ><?php if(isset($_GET['servis_id'])){
                      $servis_id = $_GET['servis_id'];
                      $sql = "SELECT * FROM servisler WHERE servis_id='$servis_id'";
                      $result = mysqli_query($conn, $sql);
@@ -221,8 +221,9 @@ include_once "server.php";
                      <div class="container gal-container">
          
 <?php    echo "
-    <h3><center>  $servis_ismi  </center></h3>
-        <p style='color: #4f2f2f;'> $servis_icerik </p>
+      <h1 style='text-align:center;'> $isim  </h1>
+    <br>
+        <p style='text-align:center;color:#4f2f2f'> $icerik </p><br>
     ";
     for($i=0; $i < $toplam; $i++){
                         
