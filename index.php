@@ -582,7 +582,7 @@
                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <input type="checkbox" name="kontrol" id="kontrol" rows="6">
-                              <label style="color: #4f2f2f;" for="kontrol">Sitenin güvenlik ve gizlilik şartlarını okudum, bu şartları kabul ediyorum.</label><br>
+                              <label style="color: #4f2f2f;" for="kontrol">Sitenin <a href="gizlilik.php">güvenlik ve gizlilik şartlarını</a> okudum, bu şartları kabul ediyorum.</label><br>
                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                               <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Gönder</button>
@@ -628,7 +628,7 @@
                      <ul class="wprt-links clearfix col2">
                         <li><a data-scroll="" href="#home">Ana Sayfa</a></li>
                         <li><a data-scroll="" href="#projeler">Projeler</a></li>
-                        <li><a data-scroll="" href="#services">DİĞER SERVİSLER</a></li>
+                        <li><a data-scroll="" href="#services">Diğer Servisler</a></li>
                         <li><a data-scroll="" href="#galeri">Galeri</a></li>
                         <li><a data-scroll="" href="#kadro">Kadromuz</a></li>
                         <li><a data-scroll="" href="#iletisim">Bizimle iletişime geçin</a></li>
