@@ -210,7 +210,7 @@ include_once "server.php";
             <div class="row">
                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
                   <div class="message-box">
-                     <h2>GALERİMİZ</h2>
+                     <h2><?php echo $servis_ismi; ?></h2>
                      
                   </div>
                   <!-- end messagebox -->
@@ -221,9 +221,9 @@ include_once "server.php";
                      <div class="container gal-container">
          
 <?php    echo "
-      <h1 style='text-align:center;'> $isim  </h1>
-    <br>
-        <p style='text-align:center;color:#4f2f2f'> $icerik </p><br>
+      
+    
+        <p style='text-align:center;color:#4f2f2f'> $servis_icerik </p><br>
     ";
     for($i=0; $i < $toplam; $i++){
                         
