@@ -145,8 +145,18 @@ include_once "server.php";
             </div>
          </nav>
       </header>
+
+      <?php 
+         $sql = "SELECT arkaplan_yol FROM arkaplanlar WHERE arkaplan_isim = 'projeler'";
+         $result = mysqli_query($conn, $sql);
+         $row = mysqli_fetch_assoc($result);
+
+         $projeler_arkaplan = $row['arkaplan_yol'];
+         echo $projeler_arkaplan;
       
-      <div id="home" class="parallax" data-stellar-background-ratio="0.4" style="background-image:url('images/foto.jpg');">
+      ?>
+      
+      <div id="home" class="parallax" data-stellar-background-ratio="0.4" style="background-image:url('images/arkaplan/<?php echo $projeler_arkaplan; ?>');">
          <div class="container">
             <div class="row">
                <div style="margin-top: 7%;" class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center">

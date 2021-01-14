@@ -38,6 +38,7 @@
                  <option value="projeler">Proje</option>
                  <option value="servisler">Servisler</option>
                  <option value="ikonlar">İkonlar</option>
+                 <option value="arkaplan">Arkaplanlar</option>
            </select>
            </td>
 <table id="tablo1">

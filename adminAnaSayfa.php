@@ -141,8 +141,17 @@
         </tr>
 
         <tr>
+            <td>Anasayfa arkaplanı için</td><td> <a  class="link"href="resimler/anasayfa_arkaplan_sec.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Projeler arkaplanı için</td><td> <a  class="link"href="resimler/projeler_arkaplan_sec.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
             <td>Tüm resimleri görmek için</td><td> <a  class="link"href="resimler/tum_resimleri_goster.php">Tıklayınız.</a></td>
         </tr>
+
 
 
         <tr>

@@ -141,8 +141,18 @@
             </div>
          </nav>
       </header>
+
+      <?php 
+         $sql = "SELECT arkaplan_yol FROM arkaplanlar WHERE arkaplan_isim = 'anasayfa'";
+         $result = mysqli_query($conn, $sql);
+         $row = mysqli_fetch_assoc($result);
+
+         $anasayfa_arkaplan = $row['arkaplan_yol'];
+         echo $anasayfa_arkaplan;
       
-      <div id="home" class="parallax first-section" data-stellar-background-ratio="0.4" style="background-image:url('uploads/building/slide-img1.png');">
+      ?>
+      
+      <div id="home" class="parallax first-section" data-stellar-background-ratio="0.4" style="background-image:url('images/arkaplan/<?php echo $anasayfa_arkaplan ?>');">
          <div class="container">
             <div class="row">
                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center">
