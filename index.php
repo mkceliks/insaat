@@ -319,8 +319,19 @@
                      <img src="images/sr1.png" alt="#" />
                   </div>
                   <div class="serv-blog-cont">
-                     <h3>Manufacturing</h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                     <h3>MALZEME</h3>
+                     <p>
+                     <?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'malzeme'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $malzeme_icerik = $row['icerik'];
+                                 echo $malzeme_icerik;
+                     
+                              ?>
+                     
+                     </p>
                   </div>
                </div>
                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 serv" style="background:#181818;">
@@ -328,8 +339,18 @@
                      <img src="images/sr2.png" alt="#" />
                   </div>
                   <div class="serv-blog-cont">
-                     <h3>Fabrication</h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                     <h3>İNŞA SÜRECİ</h3>
+                     <p>
+                     <?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'surec'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $surec_icerik = $row['icerik'];
+                                 echo $surec_icerik;
+                     
+                              ?>
+                     </p>
                   </div>
                </div>
                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 serv" style="background:#222;">
@@ -337,8 +358,19 @@
                      <img src="images/sr3.png" alt="#" />
                   </div>
                   <div class="serv-blog-cont">
-                     <h3>Construction</h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                     <h3>YAPI</h3>
+                     <p>
+                     <?php 
+                                 $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'yapi'";
+                                 $result = mysqli_query($conn, $sql);
+                                 $row = mysqli_fetch_assoc($result);
+
+                                 $yapi_icerik = $row['icerik'];
+                                 echo $yapi_icerik;
+                     
+                              ?>
+                     
+                     </p>
                   </div>
                </div>
             </div>

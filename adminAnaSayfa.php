@@ -37,6 +37,18 @@
         </tr>
 
         <tr>
+            <td>Malzeme için </td><td> <a class="link" href="ayarlar/malzeme.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>İnşa Süreci için </td><td> <a class="link" href="ayarlar/surec.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
+            <td>Yapı için </td><td> <a class="link" href="ayarlar/yapi.php">Tıklayınız.</a></td>
+        </tr>
+
+        <tr>
         <th>Sosyal Medya Linkleri</th>
         <th>Işlem</th>
         </tr>
