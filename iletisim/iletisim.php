@@ -47,7 +47,7 @@
                    
                    
                     
-                    <td> <a class='linkred' href = 'iletisim_sil.php?iletisim_id=".$row['iletisim_id']." '> Sil </a> </td>
+                    <td> <a class='linkred' href = 'iletisim_sil.php?iletisim_id=".$row['iletisim_id']." '> Okundu olarak işaretle </a> </td>
                     </tr>
                     
 
