@@ -119,16 +119,16 @@
                </div>
             </div>
             <div class="container">
-               <div class="navbar-header">
+               <div style="height: 100px;" class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="index.php"><img src="images/logo-icon.png" alt="image"><span>Koyukan İnşaat</span></a>
+                  <a class="navbar-brand" href="index.php"><img src="images/logokk.png" alt="image"><span>Koyukan İnşaat</span></a>
                </div>
-               <div id="navbar" class="navbar-collapse collapse">
+               <div style="margin-top: 28px;" id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
                      <li class="active"><a data-scroll href="#home">ANA SAYFA</a></li>
                      <li><a data-scroll href="#projeler">PROJELER <span class="hidden-xs">*</span></a></li>
@@ -463,7 +463,7 @@
          <div class="container">
             <div class="section-title row text-center">
                <div class="col-md-8 col-md-offset-2">
-                  <h3>Kadromuz</h3>
+                  <h3 style="color:white;">Kadromuz</h3>
                   
                </div>
                <!-- end col -->
@@ -651,7 +651,7 @@
                   <div class="widget widget_text">
                      <h2 class="widget-title"><span>Hakkımızda</span></h2>
                      <div class="textwidget">
-                        <a class="navbar-brand" href="index-building.html"><img height="200"; src="images/logo-icon.png" alt="image"><span>Constructed</span></a>
+                        <a class="navbar-brand" href="index-building.html"><img style="height: 200%;" src="images/logokk.png" alt="image"><span style="margin-top: 40px;">KOYUKAN İNŞAAT</span></a><br><br><br>
                         <p><?php 
                                  $sql = "SELECT icerik FROM icerikler WHERE icerik_ismi = 'hakkimizda_footer'";
                                  $result = mysqli_query($conn, $sql);

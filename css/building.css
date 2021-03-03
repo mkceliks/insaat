@@ -162,17 +162,17 @@ h2 {
     box-shadow: 0 15px 25px -32px #000;
 }
 .header_style_01 .navbar-brand img {
-    height: 100%;
+    height: 200%;
     float: left;
-    margin-right:10px; 
+    margin-right:15px; 
    
 }
 .building_version .navbar-default .navbar-brand span {
     color: #fff;
     text-transform: uppercase;
-    margin: 20px 0 0 0;
+    margin: 35px 0 0 0;
     float: left;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 700;
 }
 .preloader {
